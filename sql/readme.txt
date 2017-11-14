@@ -2,7 +2,7 @@ SELECT CLUB BY:
 
 [   ]  Team stats
   Goal scoring
-  o Overall top scorers ==> 
+  o Overall top scorers ==> SELECT_TOP_GOALS_BY_CLUB.sql
   o Overall top goals per game ==> SELECT_TOP_GPG_BY_CLUB.sql
   o No preference 
 
