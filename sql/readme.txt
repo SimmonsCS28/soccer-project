@@ -7,15 +7,15 @@ SELECT CLUB BY:
   o No preference 
 
   Discipline/foul play
-  o Overall top discipline ==> 
+  o Overall top discipline ==> SELECT_TOP_DISCIPLINE_BY_CLUB.sql
   o Overall top discipline per game ==> SELECT_TOP_FPG_BY_CLUB.sql
-  o Overall least discipline ==> 
-  o Overall least discipline per game ==> 
+  o Overall least discipline ==> SELECT_LEAST_DISCIPLINE_BY_CLUB.sql
+  o Overall least discipline per game ==> SELECT_LEAST_FPG_BY_CLUB.sql
   o No preference 
 
   Experience
   o Most overall experienced ==> SELECT_MOST_EXPERIENCED_BY_CLUB.sql
-  o Least overall experienced ==> 
+  o Least overall experienced ==> SELECT_LEAST_EXPERIENCE_BY_CLUB.sql
   o No preference 
 
 [   ] Player stats (note that results will be larger)
