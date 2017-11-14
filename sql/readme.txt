@@ -20,20 +20,20 @@ SELECT CLUB BY:
 
 [   ] Player stats (note that results will be larger)
   Goal scoring
-  o Top scorers ==> 
-  o Top goals per game ==> 
+  o Top scorers ==> SELECT_TOP_SCORER_BY_PLAYER.sql
+  o Top goals per game ==> SELECT_TOP_GPG_BY_PLAYER.sql
   o No preference 
 
   Discipline/foul play
-  o Top discipline ==> 
-  o Top discipline per game ==> 
-  o Least discipline ==> 
-  o Least discipline per game ==> 
+  o Top discipline ==> SELECT_TOP_DISCIPLINE_BY_PLAYER.sql
+  o Top discipline per game ==> SELECT_TOP_FPG_BY_PLAYER.sql
+  o Least discipline ==> SELECT_LEAST_DISCIPLINE_BY_PLAYER.sql
+  o Least discipline per game ==> SELECT_LEAST_FPG_BY_PLAYER.sql
   o No preference 
 
   Experience
-  o Most experienced ==> 
-  o Least experienced ==> 
+  o Most experienced ==> SELECT_MOST_EXPERIENCE_BY_PLAYER.sql
+  o Least experienced ==> SELECT_LEAST_EXPERIENCE_BY_PLAYER.sql
   o No preference 
 
 [   ] Achievements
