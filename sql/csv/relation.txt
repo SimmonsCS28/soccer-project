@@ -1,0 +1,27 @@
+Player(playerName: string {PK}, 
+       position: string, 
+       gamesPlayed: int, 
+       goalsScored: int, 
+       yellowCards: int, 
+       redCards: int, 
+       clubName: string {FK} );
+
+League(leagueName: string {PK}, region: string);
+
+Club(clubName: string {PK}, 
+     colors: string, 
+     worldRanking: int, 
+     leagueName: string {FK} );
+
+Season(year: string {PK}, 
+       leagueStanding: int, 
+       goalsFor: int, 
+       goalsAgainst: int, 
+       numTrophies: int, 
+       gamesPlayed: int, 
+       numLosses: int, 
+       numWins: int, 
+       clubName: string {PK, FK});
+       
+       
+       *** PK = Primary Key, FK = Foreign Key ***
