@@ -37,12 +37,12 @@ SELECT CLUB BY:
   o No preference 
 
 [   ] Achievements
-  [   ] Most trophies won ==> 
-  [   ] Highest goal average ==> 
-  [   ] Lowest goals conceded average ==> 
-  [   ] Top 5 finisher ==> 
-  [   ] Highest win percentage ==> 
-  [   ] Lowest loss percentage ==> 
+  [   ] Most trophies won ==> SELECT_MOST_TROHPHIES_BY_CLUB.sql
+  [   ] Highest goal average ==> SELECT_HIGHEST_GOAL_AVG.sql
+  [   ] Lowest goals conceded average ==> SELECT_LOWEST_GOALS_CONCEDED_AVG.sql
+  [   ] Top 5 finisher ==> SELECT_TOP_FIVE_FINISHERS.sql
+  [   ] Highest win percentage ==> SELECT_HIGHEST_WIN_PERCENTAGE.sql
+  [   ] Lowest loss percentage ==> SELECT_LOWEST_LOSS_PERCENTAGE.sql
 
 [   ] Other properties
   Favorite color: [ Blue [v]]
