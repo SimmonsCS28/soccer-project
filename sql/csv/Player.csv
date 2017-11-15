@@ -1,0 +1,683 @@
+playerName,position,gamesPlayed,goalsScored,yellowCards,redCards,clubName
+De Gea,GK,365,0,6,0,Manchester United
+Phil Jones,DF,220,5,28,0,Manchester United
+Romelu Lukaku,ST,326,156,24,1,Manchester United
+Nemanja Matic,MF,287,19,63,3,Manchester United
+Antonio Valencia,DF,408,30,54,4,Manchester United
+Henrikh Mkhitaryan,MF,338,111,43,0,Manchester United
+Eric Bailly,DF,120,2,33,5,Manchester United
+Marcus Rashford,ST,92,26,5,0,Manchester United
+Juan Mata,MF,504,124,42,1,Manchester United
+Paul Pogba,MF,242,45,39,1,Manchester United
+Marouane Fellaini,MF,392,63,95,5,Manchester United
+Fernandinho,MF,491,78,103,8,Manchester City
+Nicolas Otamendi,DF,322,18,84,2,Manchester City
+David Silva,MF,523,87,61,3,Manchester City
+Ederson,GK,124,0,17,2,Manchester City
+Kevin De Bruyne,MF,325,72,32,2,Manchester City
+John Stones,DF,176,6,9,1,Manchester City
+Kyle Walker,DF,311,6,52,1,Manchester City
+Gabriel Jesus,ST,74,35,20,1,Manchester City
+Raheem Sterling,MF,234,52,29,1,Manchester City
+Sergio Kun Aguero,ST,551,301,64,5,Manchester City
+Leroy Sane,MF,106,28,13,0,Manchester City
+Toby Alderweireld,DF,335,24,31,0,Tottenham Hotspur
+Hugo Lloris,GK,502,0,6,2,Tottenham Hotspur
+Jan Vertonghen,DF,454,40,80,3,Tottenham Hotspur
+Dele Alli,MF,190,58,33,1,Tottenham Hotspur
+Harry Kane,ST,241,126,19,1,Tottenham Hotspur
+Eric Dier,MF,191,11,31,0,Tottenham Hotspur
+Christian Eriksen,MF,351,76,17,0,Tottenham Hotspur
+Kieran Trippier,DF,279,9,22,1,Tottenham Hotspur
+Ben Davies,DF,183,7,24,0,Tottenham Hotspur
+Davinson Sanchez,DF,99,8,16,0,Tottenham Hotspur
+Moussa Sissoko,MF,398,37,50,3,Tottenham Hotspur
+Abdoulaye Doucoure,MF,138,20,21,0,Watford FC
+Heurelho Gomes,GK,503,0,20,1,Watford FC
+Tom Cleverly,MF,244,28,28,1,Watford FC
+Richarlison,MF,78,23,10,1,Watford FC
+Jose Holebas,DF,336,33,63,5,Watford FC
+Kiko Femenia,MF,243,15,27,0,Watford FC
+Christian Kabasele,DF,180,20,26,1,Watford FC
+Andre Gray,ST,151,58,7,0,Watford FC
+Nathaniel Chalobah,DF,126,10,17,2,Watford FC
+Adrian Mariappa,DF,42,1,3,1,Watford FC
+Andre Carrillo,MF,209,23,36,1,Watford FC
+Azpilicueta,DF,415,8,56,2,Chelsea FC
+Thibaut Courtois,GK,318,0,9,3,Chelsea FC
+Marcos Alonso,DF,199,18,41,3,Chelsea FC
+N'Golo Kante,MF,174,10,24,1,Chelsea FC
+Willian,MF,428,64,34,1,Chelsea FC
+Cesc Fabregas,MF,600,118,112,3,Chelsea FC
+Antonio Rudiger,DF,184,7,31,6,Chelsea FC
+David Luiz,DF,396,29,99,1,Chelsea FC
+Tiemoue Bakayoko,MF,131,8,18,2,Chelsea FC
+Morata,ST,216,77,37,2,Chelsea FC
+Victor Moses,MF,312,43,20,2,Chelsea FC
+Petr Cech,GK,726,0,11,2,Arsenal FC
+Hector Bellerin,DF,133,5,17,0,Arsenal FC
+Nacho Monreal,DF,381,8,55,3,Arsenal FC
+Granit Xhaka,MF,256,16,57,8,Arsenal FC
+Sead Kolasinac,MF,140,8,30,0,Arsenal FC
+Alexandre Lacazette,ST,284,133,35,2,Arsenal FC
+Aaron Ramsey,MF,337,51,42,1,Arsenal FC
+Danny Welbeck,ST,257,58,15,0,Arsenal FC
+Shkodran Mustafi,DF,178,9,50,4,Arsenal FC
+Laurent Koscielny,DF,423,32,52,8,Arsenal FC
+Mesut Ozil,MF,473,77,35,3,Arsenal FC
+Jack Cork,MF,381,13,41,1,Burnley FC
+Matthew Lowton,DF,239,13,37,2,Burnley FC
+Ben Mee,DF,240,6,43,1,Burnley FC
+James Tarkowski,DF,193,9,30,3,Burnley FC
+Stephen Ward,MF,371,17,31,2,Burnley FC
+Robbie Brady,MF,211,24,22,2,Burnley FC
+Steven Defour,MF,398,33,77,2,Burnley FC
+Chris Wood,ST,302,105,7,0,Burnley FC
+Johann Gudjmundsson,MF,291,43,20,1,Burnley FC
+Nick Pope,GK,95,0,2,0,Burnley FC
+Scott Arfield,MF,403,43,49,1,Burnley FC
+Joel Matip,DF,307,25,32,2,Liverpool FC
+Jordan Henderson,MF,343,30,44,1,Liverpool FC
+Simon Mignolet,GK,356,1,14,0,Liverpool FC
+Mohamed Salah,MF,253,80,11,1,Liverpool FC
+Georginio Wijnaldum,MF,386,101,19,0,Liverpool FC
+Roberto Firmino,ST,256,78,36,0,Liverpool FC
+Alberto Moreno,DF,182,6,31,1,Liverpool FC
+Emre Can,MF,217,18,50,2,Liverpool FC
+Joe Gomez,DF,51,1,9,1,Liverpool FC
+Dejan Lovren,DF,323,12,57,8,Liverpool FC
+Sadio Mane,MF,220,86,35,7,Liverpool FC
+Rob Elliot,GK,167,0,12,1,Newcastle United
+Matt Ritchie,MF,341,79,45,0,Newcastle United
+Jamaal Lascelles,DF,154,12,29,1,Newcastle United
+Ayoze Perez,MF,160,42,15,0,Newcastle United
+Christian Atsu,ST,154,20,7,0,Newcastle United
+Ciaran Clark,DF,202,14,49,2,Newcastle United
+Mikel Merino,MF,84,8,25,2,Newcastle United
+Isaac Hayden,MF,73,4,20,0,Newcastle United
+Manquillo,DF,107,1,9,0,Newcastle United
+Joselu,ST,180,47,23,1,Newcastle United
+Chancel Mbemba,DF,130,10,15,1,Newcastle United
+Craig Dawson,DF,264,35,32,1,West Bromwich Albion
+Jay Rodriguez,ST,273,82,26,0,West Bromwich Albion
+Ahmed Hegazy,DF,91,2,13,2,West Bromwich Albion
+Gareth Barry,MF,764,63,127,7,West Bromwich Albion
+Ben Foster,GK,337,0,14,1,West Bromwich Albion
+Jake Livermore,MF,267,12,46,1,West Bromwich Albion
+Matt Phillips,MF,282,47,12,0,West Bromwich Albion
+Jonny Evans,DF,304,12,35,2,West Bromwich Albion
+Allan Nyom,DF,264,2,69,1,West Bromwich Albion
+Grzegorz Krychowiak,MF,250,15,64,4,West Bromwich Albion
+Chris Brunt,MF,449,66,66,1,West Bromwich Albion
+Fraser Forster,GK,335,0,16,2,Southampton FC
+Ryan Bertrand,DF,322,10,42,1,Southampton FC
+Cedric Soares,DF,187,2,48,2,Southampton FC
+Oriol Romeu,MF,189,5,47,0,Southampton FC
+Nathan Redmond,MF,265,30,12,1,Southampton FC
+Dusan Tadic,ST,354,84,40,0,Southampton FC
+Maya Yoshida,DF,269,20,21,1,Southampton FC
+Steven Davis,MF,515,40,28,0,Southampton FC
+Mario Lemina,MF,116,5,14,2,Southampton FC
+Manolo Gabbiadini,ST,235,67,25,1,Southampton FC
+Shane Long,ST,433,105,37,2,Southampton FC
+Thomas Ince,MF,271,75,22,0,Huddersfield Town
+Mathias Jorgensen,DF,302,20,42,3,Huddersfield Town
+Jonas Lossl,GK,253,0,7,0,Huddersfield Town
+Christopher Schindler,DF,262,9,31,1,Huddersfield Town
+Tom Smith,DF,165,5,2,0,Huddersfield Town
+Elias Kachunga,ST,220,54,32,1,Huddersfield Town
+Aaron Mooy,MF,188,29,26,0,Huddersfield Town
+Chris Lowe,DF,266,15,36,0,Huddersfield Town
+Rajiv van La Parra,MF,239,23,16,2,Huddersfield Town
+Philip Billing,MF,51,4,7,1,Huddersfield Town
+Laurent Depoitre,ST,208,66,16,0,Huddersfield Town
+Jordan Ayew,ST,279,54,48,4,Swansea City
+Lukasz Fabianski,GK,259,0,6,1,Swansea City
+Federico Fernandez,DF,258,10,42,3,Swansea City
+Alfie Mawson,DF,145,20,11,0,Swansea City
+Kyle Naughton,DF,305,9,39,3,Swansea City
+Martin Olsson,DF,296,10,36,4,Swansea City
+Tom Carroll,MF,153,6,13,0,Swansea City
+Tammy Abraham,ST,79,40,3,0,Swansea City
+Leroy Fer,MF,344,57,58,2,Swansea City
+Sam Clucas,MF,216,35,30,1,Swansea City
+Renato Sanches,MF,100,5,19,3,Swansea City
+Lewis Dunk,DF,201,13,45,5,Brighton & Hove Albion
+Davy Propper,MF,259,43,28,1,Brighton & Hove Albion
+Mathew Ryan,GK,249,0,13,0,Brighton & Hove Albion
+Dale Stephens,MF,282,36,46,2,Brighton & Hove Albion
+Shane Duffy,DF,175,12,34,2,Brighton & Hove Albion
+Pascal Gross,MF,236,28,38,1,Brighton & Hove Albion
+Solomon March,MF,101,11,7,0,Brighton & Hove Albion
+Markus Suttner,DF,378,14,66,2,Brighton & Hove Albion
+Bruno,DF,417,7,99,5,Brighton & Hove Albion
+Anthony Knockaert,MF,251,59,41,0,Brighton & Hove Albion
+Tomer Hemed,ST,233,79,16,1,Brighton & Hove Albion
+Joe Hart,GK,436,0,10,0,West Ham United
+Pablo Zabaleta,DF,527,23,119,7,West Ham United
+Javier Hernandez,ST,354,139,33,1,West Ham United
+Aaron Cresswell,DF,326,17,23,3,West Ham United
+Michail Antonio,MF,295,65,31,1,West Ham United
+Winston Reid,DF,298,13,64,2,West Ham United
+Jose Fonte,DF,450,22,74,2,West Ham United
+Cheikhou Kouyate,MF,347,21,38,6,West Ham United
+Mark Noble,MF,425,48,82,4,West Ham United
+Andre Ayew,ST,328,86,54,2,West Ham United
+Angelo Ogbonna,DF,278,3,40,2,West Ham United
+Jordan Pickford,GK,141,0,6,3,Everton FC
+Leighton Baines,DF,540,40,61,1,Everton FC
+Idrissa Gueye,MF,261,9,49,1,Everton FC
+Michael Keane,DF,175,14,15,0,Everton FC
+Wayne Rooney,ST,651,274,120,4,Everton FC
+Morgan Schneiderlin,MF,334,17,63,3,Everton FC
+Gylfi Sigurdsson,MF,315,86,20,1,Everton FC
+Ashley Williams,DF,410,16,59,1,Everton FC
+Dominic Calvert-Lewin,ST,72,15,6,0,Everton FC
+Phil Jagielka,DF,601,35,32,3,Everton FC
+Cuco Martina,DF,243,5,17,1,Everton FC
+Jack Butland,GK,166,0,2,0,Stoke City
+Darren Fletcher,MF,449,30,31,4,Stoke City
+Erik Pieters,DF,362,3,72,2,Stoke City
+Xherdan Shaqiri,MF,285,51,36,1,Stoke City
+Eric Maxim Choupo-Moting,ST,294,58,11,0,Stoke City
+Mame Diouf,ST,265,86,36,2,Stoke City
+Kurt Zouma,DF,155,8,9,1,Stoke City
+Joe Allan,MF,317,22,39,1,Stoke City
+Geoff Cameron,DF,311,15,41,3,Stoke City
+Jese,ST,168,46,15,1,Stoke City
+Bruno Martins Indi,DF,234,8,29,3,Stoke City
+Harry Maguire,DF,256,15,49,3,Leicester City
+Wes Morgan,DF,515,21,59,5,Leicester City
+Wilfred Ndidi,MF,116,9,16,0,Leicester City
+Kasper Schmeichel,GK,404,0,15,1,Leicester City
+Danny Simpson,DF,330,3,54,1,Leicester City
+Jamie Vardy,ST,203,74,27,2,Leicester City
+Riyad Mahrez,MF,212,46,12,0,Leicester City
+Marc Albrighton,MF,224,17,30,1,Leicester City
+Christian Fuchs,DF,467,29,80,3,Leicester City
+Shinji Okazaki,ST,334,95,25,0,Leicester City
+Matty James,MF,157,9,7,2,Leicester City
+Asmir Begovic,GK,239,1,16,0,AFC Bournemouth
+Charlie Daniels,MF,316,18,27,1,AFC Bournemouth
+Nathan Ake,DF,70,4,7,1,AFC Bournemouth
+Joshua King,ST,190,37,10,0,AFC Bournemouth
+Andrew Surman,MF,363,30,26,1,AFC Bournemouth
+Adam Smith,DF,238,7,47,3,AFC Bournemouth
+Simon Francis,DF,464,7,66,4,AFC Bournemouth
+Steve Cook,DF,237,15,35,0,AFC Bournemouth
+Jermain Defoe,ST,625,252,59,5,AFC Bournemouth
+Harry Arter,MF,242,29,69,3,AFC Bournemouth
+Dan Gosling,MF,209,23,25,1,AFC Bournemouth
+Andros Townsend,MF,261,32,22,1,Crystal Palace
+Scott Dann,DF,349,29,57,0,Crystal Palace
+Wayne Hennessey,GK,263,0,5,1,Crystal Palace
+Joel Ward,DF,291,10,30,0,Crystal Palace
+Jason Puncheon,MF,314,46,49,3,Crystal Palace
+Timothy Fosu-Mensah,DF,42,1,2,0,Crystal Palace
+Christian Benteke,ST,314,118,36,5,Crystal Palace
+Patrick van Aanholt,DF,250,21,23,1,Crystal Palace
+Luka Milivojevic,MF,234,27,63,3,Crystal Palace
+Yohan Cabaye,MF,486,69,106,6,Crystal Palace
+Jeffrey Schlupp,DF,185,22,14,0,Crystal Palace
+Lionel Messi,ST,596,522,61,0,FC Barcelona
+Marc-Andre ter Stegen,GK,251,0,10,0,FC Barcelona
+Jordi Alba,DF,354,19,75,3,FC Barcelona
+Sergio Busquets,MF,445,13,101,2,FC Barcelona
+Ivan Rakitic,MF,500,86,57,2,FC Barcelona
+Gerard Pique,DF,459,41,108,9,FC Barcelona
+Samuel Umtiti,DF,224,6,39,1,FC Barcelona
+Sergi Roberto,DF,242,14,25,1,FC Barcelona
+Andres Iniesta,MF,641,55,58,0,FC Barcelona
+Luis Suarez,ST,488,331,107,2,FC Barcelona
+Gerard Deulofeu,ST,203,42,12,1,FC Barcelona
+Parejo,MF,354,49,87,2,Valencia CF
+Carlos Soler,MF,74,7,10,2,Valencia CF
+Neto,GK,167,0,12,1,Valencia CF
+Gaya,DF,144,5,32,1,Valencia CF
+Simone Zaza,ST,177,61,54,2,Valencia CF
+Rodrigo,ST,228,61,19,4,Valencia CF
+Geoffrey Kondogbia,MF,206,9,38,4,Valencia CF
+Martin Montoya,DF,172,4,27,0,Valencia CF
+Ezequiel Garay,DF,380,37,50,3,Valencia CF
+Goncalo Guedes,ST,125,25,13,1,Valencia CF
+Gabriel Paulista,DF,145,1,26,3,Valencia CF
+Sergio Ramos,DF,586,72,192,27,Real Madrid
+Marco Asensio,MF,145,26,13,1,Real Madrid
+Nacho Fernandez,DF,146,5,27,0,Real Madrid
+Casemiro,MF,237,20,70,0,Real Madrid
+Isco Alarcon,MF,294,55,30,4,Real Madrid
+Dani Carvajal,DF,206,5,65,0,Real Madrid
+Keylor Navas,GK,224,0,12,1,Real Madrid
+Toni Kroos,MF,425,46,62,0,Real Madrid
+Luka Modric,MF,414,35,51,1,Real Madrid
+Cristiano Ronaldo,ST,724,535,92,10,Real Madrid
+Raphael Varane,DF,224,12,15,1,Real Madrid
+Jan Oblak,GK,197,0,9,2,Atletico Madrid
+Saul Niguez,MF,197,25,35,1,Atletico Madrid
+Koke,MF,333,29,55,1,Atletico Madrid
+Stefan Savic,DF,259,8,37,2,Atletico Madrid
+Antoine Griezmann,ST,371,138,52,1,Atletico Madrid
+Lucas Hernandez,DF,74,1,9,0,Atletico Madrid
+Gabi,MF,555,27,167,10,Atletico Madrid
+Angel Correa,ST,160,31,36,0,Atletico Madrid
+Diego Godin,DF,446,28,104,9,Atletico Madrid
+Juanfran,DF,520,21,82,2,Atletico Madrid
+Yannick Ferreira-Carrasco,MF,210,42,26,1,Atletico Madrid
+Sergio Rico,GK,165,0,8,0,Sevilla FC
+Jesus Navas,MF,590,43,62,1,Sevilla FC
+Clement Lenglet,DF,115,3,22,1,Sevilla FC
+Simon Kjaer,DF,345,18,61,4,Sevilla FC
+Gabriel Mercado,DF,364,24,91,6,Sevilla FC
+Luis Muriel,ST,206,61,28,2,Sevilla FC
+Steven N'Zonzi,MF,357,20,52,6,Sevilla FC
+Escudero,DF,198,12,41,2,Sevilla FC
+Ganso,MF,255,30,40,2,Sevilla FC
+Nolito,ST,257,80,51,1,Sevilla FC
+Pablo Sarabia,MF,204,27,44,1,Sevilla FC
+Ivan Cuellar,GK,268,0,30,4,CD Leganes
+Gabriel Pires,MF,162,17,26,0,CD Leganes
+Ruben Perez,MF,203,1,89,2,CD Leganes
+Joseba Zaldua,DF,97,0,19,1,CD Leganes
+Eraso,MF,137,22,30,1,CD Leganes
+Alexander Szymanowski,MF,176,38,15,0,CD Leganes
+Dimitrios Siovas,DF,194,5,28,0,CD Leganes
+Mauro Dos Santos,DF,233,4,48,6,CD Leganes
+Diego Rico,DF,139,6,31,1,CD Leganes
+Martin Mantovani,DF,152,11,46,4,CD Leganes
+Claudio Beauvue,ST,313,74,14,3,CD Leganes
+Asier Illarramendi,MF,232,8,59,2,Real Sociedad
+Geronimo Rulli,GK,172,0,21,1,Real Sociedad
+Xabi Prieto,MF,505,72,52,2,Real Sociedad
+Willian Jose,ST,216,59,29,5,Real Sociedad
+Odriozola,DF,113,3,16,0,Real Sociedad
+Kevin Rodrigues,MF,72,7,17,3,Real Sociedad
+Aritz Elustondo,DF,118,10,29,2,Real Sociedad
+Zurutuza,MF,269,22,38,1,Real Sociedad
+Mikel Oyarzabal,ST,87,18,4,0,Real Sociedad
+Diego Llorente,DF,139,12,32,3,Real Sociedad
+Juanmi,ST,191,39,18,2,Real Sociedad
+Rodri,MF,89,3,14,0,Villarreal CF
+Alvaro Gonzalez,DF,239,5,87,2,Villarreal CF
+Trigueros,MF,252,23,39,0,Villarreal CF
+Pablo Fornals,MF,75,7,8,0,Villarreal CF
+Jaume Costa,DF,266,6,89,6,Villarreal CF
+Mariano Barbosa,GK,315,0,21,6,Villarreal CF
+Cedric Bakambu,ST,236,77,27,1,Villarreal CF
+Samu Castillejo,MF,139,7,14,0,Villarreal CF
+Victor Ruiz,DF,269,6,69,6,Villarreal CF
+Carlos Bacca,ST,355,171,49,2,Villarreal CF
+Mario Gaspar,DF,317,9,48,1,Villarreal CF
+Adan,GK,170,0,21,1,Real Betis
+Barragan,DF,270,5,68,4,Real Betis
+Aissa Mandi,DF,205,16,29,3,Real Betis
+Andres Guardado,MF,394,36,56,1,Real Betis
+Joaquin,MF,646,87,49,5,Real Betis
+Javi Garcia,MF,417,28,125,6,Real Betis
+Riza Durmisi,DF,142,8,26,0,Real Betis
+Zouhair Feddal,DF,120,7,30,5,Real Betis
+Antonio Sanabria,ST,76,25,7,0,Real Betis
+Sergio Leon,ST,150,60,16,0,Real Betis
+Cristian Tello,ST,247,46,8,0,Real Betis
+Iago Aspas,ST,285,104,53,6,Celta Vigo
+Jonny,DF,190,3,43,2,Celta Vigo
+Pione Sisto,MF,168,38,8,0,Celta Vigo
+Hugo Mallo,DF,268,6,72,5,Celta Vigo
+Daniel Wass,MF,351,49,26,1,Celta Vigo
+Maximiliano Gomez,ST,60,35,10,2,Celta Vigo
+Stanislav Lobotka,MF,176,6,16,1,Celta Vigo
+Sergio Alvarez,GK,152,0,3,3,Celta Vigo
+Jozabed,MF,142,18,19,0,Celta Vigo
+Sergi Gomez,DF,194,3,25,4,Celta Vigo
+Gustavo Cabral,DF,420,17,98,12,Celta Vigo
+Aymeric Laporte,DF,208,10,51,6,Athletic Bilbao
+Unai Nunez,DF,42,3,10,0,Athletic Bilbao
+Kepa,GK,134,0,0,0,Athletic Bilbao
+Mikel San Jose,DF,323,35,78,3,Athletic Bilbao
+Inaki Williams,ST,158,48,14,1,Athletic Bilbao
+Raul Garcia,MF,557,97,152,7,Athletic Bilbao
+Aduriz,ST,504,205,113,8,Athletic Bilbao
+Balenziaga,DF,318,1,53,2,Athletic Bilbao
+Lekue,MF,144,5,17,0,Athletic Bilbao
+Mikel Vesga,MF,115,6,23,1,Athletic Bilbao
+Susaeta,MF,447,52,56,2,Athletic Bilbao
+Chema,DF,110,10,33,6,Levante UD
+Raul Fernandez,GK,120,0,5,1,Levante UD
+Sergio Postigo,DF,140,8,30,2,Levante UD
+Campana,MF,135,9,29,0,Levante UD
+Tono Garcia,DF,141,0,32,2,Levante UD
+Jose Morales,MF,159,20,14,1,Levante UD
+Alex Alegria,ST,113,29,17,1,Levante UD
+Pedro Lopez,DF,350,6,72,9,Levante UD
+Enis Bardhi,MF,88,22,11,1,Levante UD
+Rober,DF,40,1,2,2,Levante UD
+Jefferson Lerma,MF,155,9,46,3,Levante UD
+Aaron Martin,DF,76,1,19,1,Espanyol Barcelona
+David Lopez,DF,205,12,38,2,Espanyol Barcelona
+Gerard Moreno,ST,172,55,13,1,Espanyol Barcelona
+Pau Lopez,GK,99,0,7,0,Espanyol Barcelona
+Leo Baptistao,ST,153,32,15,0,Espanyol Barcelona
+Javi Fuego,MF,415,17,114,4,Espanyol Barcelona
+Mario Hermoso,DF,69,1,23,1,Espanyol Barcelona
+Sergi Darder,MF,147,11,29,2,Espanyol Barcelona
+Jurado,MF,416,52,33,0,Espanyol Barcelona
+Pablo Piatti,ST,369,70,47,1,Espanyol Barcelona
+Victor Sanchez,DF,272,16,97,8,Espanyol Barcelona
+Cala,DF,192,16,70,7,Getafe CF
+Dakonam Djene,DF,95,1,28,5,Getafe CF
+Guaita,GK,232,0,17,1,Getafe CF
+Damian Suarez,DF,266,5,74,8,Getafe CF
+Bergara,MF,250,5,63,6,Getafe CF
+Jorge Molina,ST,337,137,35,3,Getafe CF
+Antunes,DF,243,15,37,3,Getafe CF
+Amath Diedhiou,ST,51,14,5,0,Getafe CF
+Mauro Arambarri,MF,74,2,20,0,Getafe CF
+Faycal Fajr,MF,203,24,11,2,Getafe CF
+Alvaro Jimenez,MF,107,11,19,3,Getafe CF
+Juanfran Moreno,DF,212,7,16,1,Deportivo La Coruna
+Guilherme dos Santos,MF,139,9,24,1,Deportivo La Coruna
+Fede Cartabia,MF,125,16,26,2,Deportivo La Coruna
+Luisinho,DF,163,7,43,6,Deportivo La Coruna
+Celso Borges,MF,262,72,42,3,Deportivo La Coruna
+Fabian Schar,DF,202,25,48,1,Deportivo La Coruna
+Florin Andone,ST,148,55,34,0,Deportivo La Coruna
+Sidnei,DF,242,12,36,3,Deportivo La Coruna
+Federico Valverde,MF,50,3,1,0,Deportivo La Coruna
+Lucas Perez,ST,196,62,31,1,Deportivo La Coruna
+Emre Colak,MF,200,17,21,2,Deportivo La Coruna
+Marko Dmitrovic,GK,108,0,9,0,SD Eibar
+Capa,DF,156,9,33,1,SD Eibar
+Paulo Oliveira,DF,179,6,27,1,SD Eibar
+Dani Garcia,MF,157,2,55,2,SD Eibar
+Takashi Inui,MF,240,35,25,2,SD Eibar
+Kike Garcia,ST,230,59,28,0,SD Eibar
+Joan Jordan,MF,126,14,19,2,SD Eibar
+Gonzalo Escalante,MF,115,6,43,2,SD Eibar
+Sergi Enrich,ST,227,59,32,1,SD Eibar
+Jose Angel,DF,186,2,34,3,SD Eibar
+Arbilla,DF,192,5,51,4,SD Eibar
+Pere Pons,MF,164,3,31,2,Girona FC
+Bernardo Espinosa,DF,190,12,53,3,Girona FC
+Iraizoz,GK,452,0,31,1,Girona FC
+Pablo Maffeo,DF,48,1,11,1,Girona FC
+Borja Garcia,MF,246,41,26,1,Girona FC
+Portu,MF,167,23,41,0,Girona FC
+Christian Stuani,ST,324,96,68,3,Girona FC
+Aday,MF,122,6,22,1,Girona FC
+Juanpe,DF,178,11,49,4,Girona FC
+Alex Granell,MF,158,15,34,0,Girona FC
+Pedro Alcala,DF,140,8,34,5,Girona FC
+Jonathan Calleri,ST,137,44,21,3,UD Las Palmas
+Leandro Chichizola,GK,186,0,3,0,UD Las Palmas
+Jonathan Viera,ST,222,48,37,4,UD Las Palmas
+Ximo Navarro,DF,188,4,46,4,UD Las Palmas
+Michel Macedo,DF,186,4,34,3,UD Las Palmas
+Mauricio Lemos,DF,59,5,17,0,UD Las Palmas
+Alberto Aquilani,MF,411,41,74,3,UD Las Palmas
+Dani Castellano,DF,159,0,31,1,UD Las Palmas
+Oussama Tannane,ST,121,28,24,2,UD Las Palmas
+Tana,MF,95,12,7,0,UD Las Palmas
+Hernan,MF,125,8,31,2,UD Las Palmas
+Rodrigo Ely,DF,129,2,30,6,CD Alaves
+Fernando Pacheco,GK,133,1,10,1,CD Alaves
+Alexis,DF,361,23,116,13,CD Alaves
+Pedraza,ST,94,15,8,1,CD Alaves
+Vigaray,DF,114,2,29,2,CD Alaves
+Manu Garcia,MF,156,12,57,2,CD Alaves
+Ibai Gomez,ST,189,26,13,0,CD Alaves
+Munir El Haddadi,ST,116,26,10,2,CD Alaves
+Medran,MF,116,25,31,2,CD Alaves
+Daniel Torres,MF,282,5,90,9,CD Alaves
+Guillermo Maripan,DF,78,3,17,3,CD Alaves
+Luis Hernandez,DF,175,2,31,2,Malaga CF
+Roberto Jimenez,GK,295,0,22,1,Malaga CF
+Recio,MF,184,13,60,2,Malaga CF
+Roberto Rosales,DF,352,10,64,4,Malaga CF
+Adrian Gonzalez,MF,302,28,50,1,Malaga CF
+Paul Baysse,DF,260,15,42,3,Malaga CF
+Zdravko Kuzmanovic,MF,365,34,47,3,Malaga CF
+Juankar,MF,158,6,25,4,Malaga CF
+Borja Baston,ST,191,67,19,1,Malaga CF
+Diego Rolan,ST,195,50,15,2,Malaga CF
+Federico Ricca,DF,109,5,33,2,Malaga CF
+Michael Bradley,MF,384,43,73,1,Toronto FC
+Alex Bono,GK,46,0,2,0,Toronto FC
+Justin Morrow,DF,211,17,18,2,Toronto FC
+Victor Vazquez,MF,251,36,27,2,Toronto FC
+Eriq Zavaleta,DF,96,2,8,0,Toronto FC
+Jozy Altidore,ST,334,118,45,4,Toronto FC
+Drew Moor,DF,391,27,43,4,Toronto FC
+Marco Delgado,MF,119,11,15,2,Toronto FC
+Sebastian Giovinco,ST,334,112,41,1,Toronto FC
+Chris Mavinga,DF,140,0,30,3,Toronto FC
+Steven Beitashour,DF,207,2,23,1,Toronto FC
+Alexander Callens,DF,170,11,34,4,New York City FC
+Sean Johnson,GK,212,0,9,0,New York City FC
+Jack Harrison,ST,59,14,4,1,New York City FC
+Alexander Ring,MF,172,14,36,0,New York City FC
+David Villa,ST,591,299,72,7,New York City FC
+Maximiliano Moralez,MF,406,72,69,4,New York City FC
+Ben Sweat,DF,62,1,8,1,New York City FC
+Rodney Wallace,MF,232,29,40,0,New York City FC
+Maxime Chanot,DF,167,9,33,2,New York City FC
+Thomas McNamara,MF,84,14,13,0,New York City FC
+Frederic Brillant,DF,209,16,26,0,New York City FC
+Nemanja Nikolic,ST,260,198,21,0,Chicago Fire
+Johan Kappelhof,DF,222,4,33,4,Chicago Fire
+Dax McCarty,MF,333,21,36,0,Chicago Fire
+Joao Meira,DF,143,2,36,4,Chicago Fire
+Brandon Vincent,DF,59,2,5,0,Chicago Fire
+Michael de Leeuw,ST,297,116,46,4,Chicago Fire
+David Accam,ST,152,68,21,3,Chicago Fire
+Matt Lampson,GK,57,0,4,0,Chicago Fire
+Luis Solignac,ST,160,38,9,1,Chicago Fire
+Bastian Schweinsteiger,MF,596,75,95,2,Chicago Fire
+Matt Polster,DF,84,3,19,0,Chicago Fire
+Michael Parkhurst,DF,390,4,29,2,Atlanta United FC
+Leandro Gonzalez,DF,149,5,40,4,Atlanta United FC
+Yamil Asad,MF,94,11,19,1,Atlanta United FC
+Hector Villalba,ST,153,29,16,0,Atlanta United FC
+Carlos Carmona,MF,278,10,78,11,Atlanta United FC
+Jeff Larentowicz,MF,397,43,64,3,Atlanta United FC
+Miguel Almiron,MF,116,19,6,1,Atlanta United FC
+Greg Garza,DF,104,5,10,0,Atlanta United FC
+Julian Gressel,MF,66,7,9,0,Atlanta United FC
+Alec Kann,GK,31,0,3,0,Atlanta United FC
+Anton Walkes,DF,57,6,5,0,Atlanta United FC
+Zack Steffen,GK,48,0,4,0,Columbus Crew
+Wil Trapp,MF,137,1,15,2,Columbus Crew
+Ola Kamara,ST,263,103,8,0,Columbus Crew
+Justin Meram,ST,199,40,20,1,Columbus Crew
+Federico Higuain,MF,392,103,53,4,Columbus Crew
+Jonathan Mensah,DF,111,6,23,5,Columbus Crew
+Jukka Raitala,DF,216,2,28,0,Columbus Crew
+Josh Williams,DF,130,7,9,2,Columbus Crew
+Harrison Afful,DF,177,14,18,2,Columbus Crew
+Artur,MF,29,0,1,0,Columbus Crew
+Hector Jimenez,MF,150,5,6,1,Columbus Crew
+Luis Robles,GK,261,0,18,0,New York Red Bulls
+Felipe Campanholi,MF,297,33,51,2,New York Red Bulls
+Aaron Long,DF,41,1,7,0,New York Red Bulls
+Sacha Kljestan,MF,411,62,67,3,New York Red Bulls
+Bradley Wright-Phillips,ST,460,178,36,0,New York Red Bulls
+Kemar Lawrence,DF,81,2,13,0,New York Red Bulls
+Tyler Adams,MF,33,2,3,0,New York Red Bulls
+Damien Perrinelle,DF,304,15,49,0,New York Red Bulls
+Alex Muyl,ST,68,6,9,0,New York Red Bulls
+Daniel Royer,MF,247,40,22,0,New York Red Bulls
+Connor Lade,DF,106,2,19,2,New York Red Bulls
+Andrew Farrell,DF,173,0,17,3,New England Revolution
+Antonio Mlinar Delamea,DF,125,5,35,2,New England Revolution
+Lee Nguyen,MF,230,52,27,1,New England Revolution
+Cody Cropper,GK,41,0,1,1,New England Revolution
+Diego Fagundez,MF,195,42,16,0,New England Revolution
+Kei Kamara,ST,349,114,38,1,New England Revolution
+Benjamin Angoua,DF,210,5,42,3,New England Revolution
+Scott Caldwell,MF,169,3,22,0,New England Revolution
+Gershon Koffie,MF,191,9,41,2,New England Revolution
+Kelyn Rowe,MF,192,29,15,0,New England Revolution
+Chris Tierney,DF,265,15,21,3,New England Revolution
+Evan Bush,GK,132,0,12,1,Montreal Impact
+Laurent Ciman,DF,419,16,80,6,Montreal Impact
+Ignacio Piatti,MF,361,101,35,4,Montreal Impact
+Chris Duvall,DF,96,2,15,2,Montreal Impact
+Blerim Dzemaili,MF,414,50,106,7,Montreal Impact
+Patrice Bernier,MF,364,30,42,3,Montreal Impact
+Daniel Lovitz,DF,69,0,7,1,Montreal Impact
+Matteo Mancosu,ST,205,71,23,0,Montreal Impact
+Hernan Bernardello,MF,324,8,103,4,Montreal Impact
+Victor Cabrera,DF,78,1,17,1,Montreal Impact
+Dominic Oduro,ST,369,66,27,3,Montreal Impact
+Haris Medunjanin,MF,267,47,27,0,Philadelphia Union
+CJ Sapong,ST,228,54,13,1,Philadelphia Union
+Jack Elliott,DF,32,1,4,0,Philadelphia Union
+Alejandro Bedoya,MF,241,35,44,3,Philadelphia Union
+Andre Blake,GK,69,0,2,0,Philadelphia Union
+Chris Pontius,MF,239,52,15,0,Philadelphia Union
+Raymon Gaddis,DF,150,0,20,0,Philadelphia Union
+Oguchi Onyewu,DF,297,22,51,6,Philadelphia Union
+Fabinho,DF,201,3,39,5,Philadelphia Union
+Fafa Picault,MF,55,11,4,0,Philadelphia Union
+Ilsinho,MF,282,32,44,2,Philadelphia Union
+Joe Bendik,GK,154,0,8,0,Orlando City SC
+Scott Sutter,DF,360,14,25,0,Orlando City SC
+Donny Toia,DF,115,1,15,0,Orlando City SC
+Antonio Nocerino,MF,363,24,51,5,Orlando City SC
+Jonathan Spector,DF,352,6,44,3,Orlando City SC
+Cyle Larin,ST,88,43,1,1,Orlando City SC
+Giles Barnes,ST,334,53,19,1,Orlando City SC
+Will Johnson,MF,327,40,45,4,Orlando City SC
+Carlos Rivas,MF,137,23,20,0,Orlando City SC
+Kaka,MF,537,162,61,4,Orlando City SC
+Thomas Redding,DF,41,0,6,0,Orlando City SC
+Luciano Acosta,MF,133,12,21,2,D.C. United
+Steve Birnbaum,DF,109,6,13,0,D.C. United
+Kofi Opare,DF,82,6,9,2,D.C. United
+Bill Hamid,GK,195,0,8,3,D.C. United
+Lloyd Sam,MF,353,43,39,3,D.C. United
+Taylor Kemp,DF,113,4,13,1,D.C. United
+Patrick Mullins,ST,92,23,7,0,D.C. United
+Marcelo Sarvas,MF,237,18,60,1,D.C. United
+Jared Jeffrey,MF,163,10,29,0,D.C. United
+Nick DeLeon,MF,179,16,15,0,D.C. United
+Sean Franklin,DF,301,10,30,0,D.C. United
+Tim Parker,DF,92,3,8,0,Vancouver Whitecaps
+Jordan Harvey,DF,280,11,34,3,Vancouver Whitecaps
+Fredy Montero,ST,331,118,57,2,Vancouver Whitecaps
+David Ousted,GK,266,0,6,1,Vancouver Whitecaps
+Kendall Waston,DF,105,13,35,4,Vancouver Whitecaps
+Tony Tchani,MF,210,15,35,4,Vancouver Whitecaps
+Cristian Techera,MF,170,40,17,2,Vancouver Whitecaps
+Jake Nerwinski,DF,23,0,2,0,Vancouver Whitecaps
+Andrew Jacobson,MF,249,11,33,1,Vancouver Whitecaps
+Christian Bolanos,MF,277,44,25,2,Vancouver Whitecaps
+Matias Laba,MF,212,4,53,7,Vancouver Whitecaps
+Diego Valeri,MF,383,90,46,4,Portland Timbers
+Sebastian Blanco,MF,351,51,66,4,Portland Timbers
+Diego Chara,MF,316,14,102,5,Portland Timbers
+Darlington Nagbe,MF,229,29,5,0,Portland Timbers
+Roy Miller,DF,207,1,30,2,Portland Timbers
+Lawrence Olum,DF,128,6,20,0,Portland Timbers
+David Guzman,MF,46,3,14,0,Portland Timbers
+Fanendo Adi,ST,184,75,23,3,Portland Timbers
+Jake Gleeson,GK,66,0,1,0,Portland Timbers
+Vytautas Andriuskevicius,DF,156,1,26,2,Portland Timbers
+Alvas Powell,DF,107,5,18,1,Portland Timbers
+Stefan Frei,GK,237,0,9,0,Seattle Sounders FC
+Nicolas Lodeiro,MF,215,52,26,2,Seattle Sounders FC
+Cristian Roldan,MF,106,11,7,0,Seattle Sounders FC
+Gustav Svensson,MF,294,10,23,1,Seattle Sounders FC
+Joevin Jones,DF,49,7,5,0,Seattle Sounders FC
+Chad Marshall,DF,405,26,17,1,Seattle Sounders FC
+Clint Dempsey,ST,469,150,53,2,Seattle Sounders FC
+Osvaldo Alsonso,MF,292,15,59,4,Seattle Sounders FC
+Will Bruin,ST,231,68,10,0,Seattle Sounders FC
+Jordan Morris,ST,67,17,0,0,Seattle Sounders FC
+Roman Torres,DF,256,11,71,11,Seattle Sounders FC
+Chris Wondolowski,ST,312,140,30,0,San Jose Earthquakes
+Florian Jungwirth,DF,276,5,46,0,San Jose Earthquakes
+Victor Bernardez,DF,209,10,43,5,San Jose Earthquakes
+Anibal Godoy,MF,84,5,30,3,San Jose Earthquakes
+David Bingham,GK,109,0,9,0,San Jose Earthquakes
+Jahmir Hyka,MF,233,23,11,0,San Jose Earthquakes
+Danny Hoesen,ST,215,54,8,1,San Jose Earthquakes
+Nick Lima,DF,26,2,1,1,San Jose Earthquakes
+Marco Urena,ST,111,10,7,0,San Jose Earthquakes
+Darwin Ceren,MF,76,2,13,3,San Jose Earthquakes
+Tommy Thompson,MF,85,1,4,0,San Jose Earthquakes
+Adolfo Machado,DF,59,0,11,0,Houston Dynamo
+AJ DeLaGarza,DF,270,3,41,0,Houston Dynamo
+Leonardo,DF,129,4,9,2,Houston Dynamo
+Tyler Deric,GK,87,0,7,2,Houston Dynamo
+Alexandre De Lima,MF,243,23,36,4,Houston Dynamo
+Ricardo Clark,MF,408,37,72,3,Houston Dynamo
+Juan Cabezas,MF,177,17,35,2,Houston Dynamo
+Mauro Manotas,ST,94,25,5,0,Houston Dynamo
+Erick Torres,ST,174,53,31,4,Houston Dynamo
+DaMarcus Beasley,DF,435,55,38,0,Houston Dynamo
+Alberth Elis,ST,41,13,10,0,Houston Dynamo
+Ilie,MF,184,3,37,2,Sporting Kansas City
+Seth Sinovic,DF,218,4,36,1,Sporting Kansas City
+Tim Melia,GK,98,0,6,1,Sporting Kansas City
+Ike Opara,DF,134,14,13,1,Sporting Kansas City
+Roger Espinoza,MF,266,8,55,8,Sporting Kansas City
+Matt Besler,DF,256,3,29,2,Sporting Kansas City
+Benny Feilhaber,MF,335,45,53,3,Sporting Kansas City
+Gerso,ST,161,20,19,1,Sporting Kansas City
+Graham Zusi,MF,244,26,22,1,Sporting Kansas City
+Jimmy Medranda,DF,84,3,10,1,Sporting Kansas City
+Latif Blessing,ST,30,6,3,0,Sporting Kansas City
+Maximiliano Urruti,ST,221,58,15,1,FC Dallas
+Hernan Grana,DF,260,4,36,2,FC Dallas
+Carlos Gruezo,MF,174,5,45,2,FC Dallas
+Jesse Gonzalez,GK,57,0,7,0,FC Dallas
+Michael Barrios,MF,154,29,17,0,FC Dallas
+Matt Hedges,DF,198,16,25,0,FC Dallas
+Maynor Figueroa,DF,327,11,63,2,FC Dallas
+Roland Lamah,MF,322,56,31,2,FC Dallas
+Atiba Harris,MF,300,34,73,4,FC Dallas
+Kellyn Acosta,MF,123,12,17,1,FC Dallas
+Walker Zimmerman,DF,106,8,9,0,FC Dallas
+Albert Rusnak,MF,130,23,11,0,Real Salt Lake
+Nick Rimando,GK,507,0,14,0,Real Salt Lake
+Joao Plata,ST,210,51,11,0,Real Salt Lake
+Kyle Beckerman,DF,484,41,115,7,Real Salt Lake
+Luke Mulholland,MF,130,15,23,1,Real Salt Lake
+Tony Beltran,DF,277,1,42,4,Real Salt Lake
+Luis Silva,MF,149,29,10,0,Real Salt Lake
+Chris Wingert,DF,380,2,75,2,Real Salt Lake
+Jefferson Savarino,MF,158,39,6,1,Real Salt Lake
+Justen Glad,DF,56,2,10,0,Real Salt Lake
+Brooks Lennon,ST,45,6,2,0,Real Salt Lake
+Jerome Thiesson,DF,287,5,43,0,Minnesota United FC
+Bobby Shuttleworth,GK,168,0,8,1,Minnesota United FC
+Ibson,MF,426,42,56,5,Minnesota United FC
+Kevin Molino,MF,69,19,9,1,Minnesota United FC
+Francisco Calvo,DF,47,4,8,0,Minnesota United FC
+Christian Ramirez,ST,100,50,3,0,Minnesota United FC
+Brent Kallman,DF,64,3,12,0,Minnesota United FC
+Miguel Ibarra,MF,46,7,4,0,Minnesota United FC
+Sam Cronin,MF,273,8,45,3,Minnesota United FC
+Abu Danladi,ST,28,8,4,1,Minnesota United FC
+Marc Burch,DF,263,4,43,2,Minnesota United FC
+Eric Miller,DF,95,1,9,1,Colorado Rapids
+Marlon Hairston,MF,86,7,4,0,Colorado Rapids
+Michael Azira,MF,100,1,21,1,Colorado Rapids
+Dominique Badji,ST,82,19,12,0,Colorado Rapids
+Mohammed Saeid,MF,153,8,17,2,Colorado Rapids
+Tim Howard,GK,623,1,22,2,Colorado Rapids
+Kevin Doyle,ST,442,111,39,0,Colorado Rapids
+Kortne Ford,DF,21,1,4,1,Colorado Rapids
+Axel Sjoberg,DF,70,3,11,2,Colorado Rapids
+Jared Watts,DF,77,1,16,3,Colorado Rapids
+Mekeil Williams,DF,44,1,12,2,Colorado Rapids
+Ashley Cole,DF,644,18,99,7,L.A. Galaxy
+Romain Alessandrini,MF,229,68,34,3,L.A. Galaxy
+Emmanuel Boateng,MF,108,12,3,0,L.A. Galaxy
+Joao Pedro,MF,147,5,28,1,L.A. Galaxy
+David Romney,DF,56,3,2,0,L.A. Galaxy
+Giovani dos Santos,ST,291,65,31,0,L.A. Galaxy
+Gyasi Zardes,ST,150,37,9,0,L.A. Galaxy
+Daniel Steres,DF,57,5,6,0,L.A. Galaxy
+Jermaine Jones,MF,379,30,134,11,L.A. Galaxy
+Jelle Van Damme,DF,452,40,114,11,L.A. Galaxy
+Clement Diop,GK,20,0,1,1,L.A. Galaxy
