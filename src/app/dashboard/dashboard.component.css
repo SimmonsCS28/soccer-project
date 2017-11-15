@@ -1,0 +1,9 @@
+p {
+    color: white;
+}
+
+#welcome-text{ 
+    padding-left: 10em;
+    font-size: 20px;
+    text-align: left;
+}
