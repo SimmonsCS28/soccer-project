@@ -1,2 +1,2 @@
 select *
-from club;
+from Club;
