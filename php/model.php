@@ -57,6 +57,18 @@ function getByClub(){
 
 
 function getByPlayer(){
+  $data = array(':goals' => 0, ':disc' => 0, ':xp' => 0);
+  if(isset($_POST['goals'])&&sizeof($_POST['goals'])>0){
+    $data[':goals'] = $_POST['goals'];
+  }
+  if(isset($_POST['disc'])&&sizeof($_POST['disc'])>0){
+    $data[':disc'] = $_POST['disc'];
+  }
+  if(isset($_POST['xp'])&&sizeof($_POST['xp'])>0){
+    $data[':xp'] = $_POST['xp'];
+  }
+  $sql = "CALL findClubByPlayer(:goals, :disc, :xp);";
+  echo getJSON($sql, $data);
 
 }
 
