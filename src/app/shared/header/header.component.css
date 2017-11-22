@@ -1,4 +1,10 @@
 h1 {
     color: white;
-    margin: 10px;
+}
+
+#login-btn {
+    padding-right: 10em;
+    padding-bottom: 1em;
+    color: white; 
+    font-size: 18px;
 }

@@ -1,15 +1,13 @@
 #main-content {
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 #sidebar {
-    max-width: 250px;
-    float: right;
     height: 100em;
 }
 
 #header-container {
-    height: 60px;
+    padding: 0;
     width: 100%;
     text-align: center;
     background-color: rgba(26, 26, 26, 0.911);
