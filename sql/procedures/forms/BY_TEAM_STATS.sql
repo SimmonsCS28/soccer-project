@@ -1,10 +1,11 @@
 DELIMITER $$
 CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice INT(1))
   BEGIN
+	  DROP TABLE IF EXISTS ClubCount;
       CREATE TEMPORARY TABLE ClubCount(
 		club VARCHAR(30)
       );
-	  
+
       #No preferences selected
       IF goalsChoice = 0 AND discChoice = 0 AND xpChoice = 0 THEN
 		INSERT INTO ClubCount
@@ -12,8 +13,8 @@ CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice
         FROM Club
         ORDER BY clubName ASC
         LIMIT 10;
-      END IF;
-      
+      END IF;	  
+
 	  #Goal scoring
 	  IF goalsChoice = 1 THEN
 	    INSERT INTO ClubCount
@@ -129,14 +130,20 @@ CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice
 		LIMIT 10; 
 	  END IF;
 	  
-    SELECT club
-    FROM ClubCount
-    GROUP BY ClubCount.club
-    ORDER BY COUNT(*) DESC, ClubCount.club ASC
-    LIMIT 3;
+	IF (goalsChoice <> 0 AND discChoice = 0 AND xpChoice = 0)
+	   OR (goalsChoice = 0 AND discChoice <> 0 AND xpChoice = 0)
+	   OR (goalsChoice = 0 AND discChoice = 0 AND xpChoice <> 0) THEN
+	    SELECT * FROM ClubCount LIMIT 5;
+	ELSE
+		SELECT *
+		FROM ClubCount
+		GROUP BY ClubCount.club
+		ORDER BY COUNT(*) DESC
+		LIMIT 5;
+	END IF;  
 	
 	DROP TABLE ClubCount;
 	
   END $$
   
-DELIMITER ;
+DELIMITER ; 
