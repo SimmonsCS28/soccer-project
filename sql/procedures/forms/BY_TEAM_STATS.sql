@@ -5,6 +5,15 @@ CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice
 		club VARCHAR(30)
       );
 	  
+      #No preferences selected
+      IF goalsChoice = 0 AND discChoice = 0 AND xpChoice = 0 THEN
+		INSERT INTO ClubCount
+        SELECT clubName
+        FROM Club
+        ORDER BY clubName ASC
+        LIMIT 10;
+      END IF;
+      
 	  #Goal scoring
 	  IF goalsChoice = 1 THEN
 	    INSERT INTO ClubCount
@@ -130,4 +139,4 @@ CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice
 	
   END $$
   
-DELIMITER ; 
+DELIMITER ;
