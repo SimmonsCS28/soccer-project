@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test forms</title>
+  </head>
+  <body>
+    <h1>Find club by club stats</h1>
+    <form method='post' action='http://washington.uww.edu/cs366/houshce29/db/data_fetch.php'>
+    
+      <input type='hidden' value='byclub' name='type'>
+    
+	    <b>Goal Scoring</b><br>
+	    <input type='radio' value='1' name='goals'>Overall top scorers<br>
+	    <input type='radio' value='2' name='goals'>Overall top goals per game<br>
+	    <input type='radio' value='0' name='goals'>No preference<br><br>
+	  
+	    <b>Discipline/Foul Play</b><br>
+	    <input type='radio' value='1' name='disc'>Overall top discipline<br>
+	    <input type='radio' value='2' name='disc'>Overall top discipline per game<br>
+	    <input type='radio' value='3' name='disc'>Overall least discipline<br>
+	    <input type='radio' value='4' name='disc'>Overall least discipline per game<br>
+	    <input type='radio' value='0' name='disc'>No preference<br><br>
+	  
+	    <b>Experience</b><br>
+	    <input type='radio' value='1' name='xp'>Most experienced<br>
+	    <input type='radio' value='2' name='xp'>Least experienced<br>
+	    <input type='radio' value='0' name='xp'>No preference<br><br>
+	  
+	    <input type='submit' value='Submit'>
+	  
+    </form>
+  </body> 
+</html>
