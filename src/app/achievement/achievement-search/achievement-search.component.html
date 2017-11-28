@@ -1,0 +1,45 @@
+<div class="container" id="achievement-search-container">
+  <div class="row">
+    <div class="col-sm-8" style="text-align: center; margin-left: 13em;">
+      <form #achievementSearchForm="ngForm" (ngSubmit)="achievementSearchSubmit()" id="achievementSearchForm">
+        <div id="achievement-data">
+          <div class="form-group">
+            <div class="row">
+              <h3>Achievements</h3>
+            </div>
+            <div class="row">
+              <label for="mostTrophies">Most Tropies Won</label>
+              <input ngModel type='radio' value='1' name='mostTrophies' id="mostTrophies">
+            </div>
+            <div class="row">
+              <label for="highestGA">Highest Goal Average</label>
+              <input ngModel type='radio' value='2' name='highestGA' id="highestGA">
+            </div>
+            <div class="row">
+              <label for="lowestGCA">Lowest Goals Conceded Average</label>
+              <input ngModel type='radio' value='3' name='lowestGCA' id="lowestGCA">
+            </div>
+            <div class="row">
+              <label for="topFF">Top 5 Finisher</label>
+              <input ngModel type='radio' value='4' name='topFF' id="topFF">
+            </div>
+            <div class="row">
+              <label for="highestWP">Highest Win Percentage</label>
+              <input ngModel type='radio' value='4' name='highestWP' id="highestWP">
+            </div>
+            <div class="row">
+              <label for="lowestLP">Lowest Loss Percentage</label>
+              <input ngModel type='radio' value='0' name='lowestLP' id="lowestLP">
+            </div>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-lg btn-success" id="player-search-submit-button" type="submit">Search</button>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-warning" type="reset">Reset Form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

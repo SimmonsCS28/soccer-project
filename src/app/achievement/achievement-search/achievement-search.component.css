@@ -1,12 +1,12 @@
-#playerSearchForm {
+#achievementSearchForm {
     background-color: rgba(26, 26, 26, 0.911);
 }
 
-#player-data {
+#achievement-data {
     margin: 20px;
 }
 
-#player-search-container {
+#achievement-search-container {
     margin-top: 4em;
 }
 
@@ -15,20 +15,8 @@
     margin-bottom: 10px;
 }
 
-#goalsScoredSlidebar{
-    margin-bottom: 10px;
-}
-
-#yellowCardSlidebar{
-    margin-bottom: 10px;
-}
-
 h3 {
     color: white;
-}
-
-#redCardSlidebar{
-    margin-bottom: 10px;
 }
 
 label {
