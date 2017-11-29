@@ -77,13 +77,33 @@ function getByPlayer(){
 
 }
 
-
+/**
+  Echoes back JSON object for getting club by achievement
+*/
 function getByAchievement(){
-
+  $data = array(':trophies' => isset($_GET['trophies']),
+                ':goalavg' => isset($_GET['goalavg']),
+                ':conavg' => isset($_GET['conavg']),
+                ':topfive' => isset($_GET['topfive']),
+                ':winper' => isset($_GET['winper']),
+                ':lossper' => isset($_GET['lossper']));
+  $sql = "CALL findClubByAchievement(:trophies, :goalavg, :conavg, :topfive, :winper, :lossper);";
+  echo getJSON($sql, $data);
 }
 
-
+/**
+  Echoes back JSON object for getting club by misc. properties
+*/
 function getByMisc(){
-
+  $data = array(':color' => 'No preference', ':region' => 'No preference');
+  if(isset($_GET['color'])){
+    $data[':color'] = $_GET['color'];
+  }
+  if(isset($_GET['region'])){
+    $data[':region'] = $_GET['region'];
+  }
+  $sql = "CALL findClubByMisc(:color, :region);";
+  echo getJSON($sql, $data);
 }
+
 ?>
