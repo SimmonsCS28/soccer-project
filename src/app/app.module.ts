@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
 import { PlayerSearchComponent } from './player/player-search/player-search.component';
 import { PlayerSearchModule } from './player/player-search/player-search.module';
+import { AchievementComponent } from './achievement/achievement.component';
+import { AchievementSearchComponent } from './achievement/achievement-search/achievement-search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { PlayerSearchModule } from './player/player-search/player-search.module'
     HeaderComponent,
     ClubSearchComponent,
     PlayerComponent,
-    PlayerSearchComponent
+    PlayerSearchComponent,
+    AchievementComponent,
+    AchievementSearchComponent
 
   ],
   imports: [

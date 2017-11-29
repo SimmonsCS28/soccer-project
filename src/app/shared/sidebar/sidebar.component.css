@@ -4,11 +4,16 @@ h2 {
     
 }
 
+a {
+    color: white;
+}
+
 #side-bar {
     padding: 0px;
 }
 #sidebar-container {
-    padding-right: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
     max-width: 170px;
     height: 100%;
     background-color: rgba(26, 26, 26, 0.911);
@@ -17,4 +22,5 @@ h2 {
 
 ul {
     text-align: center;
+    margin-right: 32px;
 }

@@ -6,11 +6,12 @@
 
 #club-search-container {
     margin-top: 10em;
-    width: 600px;
+    width: 500px;
 }
 
 #club-data {
     margin: 20px;
+    text-align: center;
 }
 
 #club-search-submit {
@@ -26,4 +27,12 @@ label {
 
 select {
     max-width: 400px;
+}
+
+b {
+    color: white;
+}
+
+h3 {
+    color: white;
 }
