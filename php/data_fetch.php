@@ -4,8 +4,8 @@
  include('model.php');
 
   // Search type
-  if(isset($_POST['type'])){
-    switch($_POST['type']){
+  if(isset($_GET['type'])){
+    switch($_GET['type']){
      case 'byclub':
       getByClub();
       break;
