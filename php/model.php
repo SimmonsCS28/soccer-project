@@ -39,33 +39,38 @@ function getJSON($sql, $data=NULL){
 # These functions handle raw form data and  echo back JSON object arrays #
 ##########################################################################
 
-//TODO: CHANGE POST VARS
+//TODO: CHANGE GET VARS
+/**
+  Echoes back JSON object for getting club by stats
+*/
 function getByClub(){
   $data = array(':goals' => 0, ':disc' => 0, ':xp' => 0);
-  if(isset($_POST['goals'])&&sizeof($_POST['goals'])>0){
-    $data[':goals'] = $_POST['goals'];
+  if(isset($_GET['goals'])&&sizeof($_GET['goals'])>0){
+    $data[':goals'] = $_GET['goals'];
   }
-  if(isset($_POST['disc'])&&sizeof($_POST['disc'])>0){
-    $data[':disc'] = $_POST['disc'];
+  if(isset($_GET['disc'])&&sizeof($_GET['disc'])>0){
+    $data[':disc'] = $_GET['disc'];
   }
-  if(isset($_POST['xp'])&&sizeof($_POST['xp'])>0){
-    $data[':xp'] = $_POST['xp'];
+  if(isset($_GET['xp'])&&sizeof($_GET['xp'])>0){
+    $data[':xp'] = $_GET['xp'];
   }
   $sql = "CALL findClubByStats(:goals, :disc, :xp);";
   echo getJSON($sql, $data);
 }
 
-
+/**
+  Echoes back JSON object for getting club by player
+*/
 function getByPlayer(){
   $data = array(':goals' => 0, ':disc' => 0, ':xp' => 0);
-  if(isset($_POST['goals'])&&sizeof($_POST['goals'])>0){
-    $data[':goals'] = $_POST['goals'];
+  if(isset($_GET['goals'])&&sizeof($_GET['goals'])>0){
+    $data[':goals'] = $_GET['goals'];
   }
-  if(isset($_POST['disc'])&&sizeof($_POST['disc'])>0){
-    $data[':disc'] = $_POST['disc'];
+  if(isset($_GET['disc'])&&sizeof($_GET['disc'])>0){
+    $data[':disc'] = $_GET['disc'];
   }
-  if(isset($_POST['xp'])&&sizeof($_POST['xp'])>0){
-    $data[':xp'] = $_POST['xp'];
+  if(isset($_GET['xp'])&&sizeof($_GET['xp'])>0){
+    $data[':xp'] = $_GET['xp'];
   }
   $sql = "CALL findClubByPlayer(:goals, :disc, :xp);";
   echo getJSON($sql, $data);
