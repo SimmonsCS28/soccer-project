@@ -30,6 +30,8 @@ export class PlayerSearchComponent implements OnInit {
 
   public playerSearchSubmit() {
 
+    
+
     const requestOptions = {
       params: new HttpParams()
     };
@@ -38,7 +40,7 @@ export class PlayerSearchComponent implements OnInit {
     console.log(requestOptions.params);
     this.playerSearchForm.value.type = 'type';
     // this.playerService.getPlayersBySearchForm(); 
-    console.log(this.playerSearchForm.value);
+    console.log(this.playerSearchForm);
     this.response = this.http.get(this.url).subscribe((res: Response) => {
      console.log(res);
     })

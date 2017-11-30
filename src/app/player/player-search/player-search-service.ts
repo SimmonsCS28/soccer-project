@@ -12,7 +12,7 @@ export class PlayerSearchService {
 
     }
 
-    // public getPlayersBySearchForm: Player () {
-    //     return this.http.get(this.url)
-    // }
+    public getPlayersBySearchForm: <Player> () {
+        return this.http.get(this.url)
+    }
 }
