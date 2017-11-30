@@ -132,5 +132,14 @@ function getPlayerStats(){
   echo getJSON($sql, $data);
 }
 
+/**
+  Returns the list of clubs
+*/
+function getClubList(){
+  $sql = "SELECT clubName
+          FROM Club
+          ORDER BY leagueName, clubName;";
+  echo getJSON($sql);
+}
 
 ?>
