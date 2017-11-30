@@ -39,7 +39,6 @@ function getJSON($sql, $data=NULL){
 # These functions handle raw form data and  echo back JSON object arrays #
 ##########################################################################
 
-//TODO: CHANGE GET VARS
 /**
   Echoes back JSON object for getting club by stats
 */
