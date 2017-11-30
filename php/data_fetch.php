@@ -18,6 +18,12 @@
      case 'bymisc':
       getByMisc();
       break;
+     case 'getclub':
+      getClubStats();
+      break;
+     case 'getplayers':
+      getPlayerStats();
+      break;
      default:
         echo 'An unknown error has occurred.';
     }
