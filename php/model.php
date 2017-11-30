@@ -125,7 +125,7 @@ function getPlayerStats(){
   if(isset($_GET['team'])){
     $data[':team'] = $_GET['team'];
   }
-  $sql = "SELECT playerName, position, gamesPlayed, goalsScored, (goalsScored/gamesPlayed),
+  $sql = "SELECT playerName, position, gamesPlayed, goalsScored, (goalsScored/gamesPlayed) AS gpg,
             yellowCards, redCards
           FROM Player
           WHERE clubName=:team;";
