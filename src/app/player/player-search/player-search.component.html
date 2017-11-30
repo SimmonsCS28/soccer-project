@@ -4,20 +4,21 @@
       <form #playerSearchForm="ngForm" (ngSubmit)="playerSearchSubmit()" id="playerSearchForm">
         <div id="player-data">
           <div class="form-group">
+            <input type='hidden' value='byclub' name='type'>
             <div class="row">
               <h3>Goal Scoring</h3>
             </div>
             <div class="row">
               <label for="overallTopScorers">Overall top scorers</label>
-              <input ngModel type='radio' value='1' name='ovTopScorers' id="overallTopScorers">
+              <input ngModel type='radio' value='1' name='goals' id="overallTopScorers">
             </div>
             <div class="row">
               <label for="topGoalsPG">Top Goals Per Game</label>
-              <input ngModel type='radio' value='2' name='topGoalsPG' id="topGoalsPG">
+              <input ngModel type='radio' value='2' name='goals' id="topGoalsPG">
             </div>
             <div class="row">
               <label for="noGoalsPref">No Preference</label>
-              <input ngModel type='radio' value='0' name='noGoalPref' id="noGoalsPref">
+              <input ngModel type='radio' value='0' name='goals' id="noGoalsPref">
             </div>
             <div class="row">
 
@@ -27,38 +28,38 @@
             </div>
             <div class="row">
               <label for="topDisc">Overall Top Discipline</label>
-              <input ngModel type='radio' value='1' name='topDisc' id="topDisc">
+              <input ngModel type='radio' value='1' name='disc' id="topDisc">
             </div>
             <div class="row">
               <label for="topDiscPerGame">Overall Top Discipline Per Game</label>
-              <input ngModel type='radio' value='2' name='topDiscPG' id="topDiscPerGame">
+              <input ngModel type='radio' value='2' name='disc' id="topDiscPerGame">
             </div>
             <div class="row">
               <label for="leastDisc">Overall Least Discipline</label>
-              <input ngModel type='radio' value='3' name='leastDisc' id="leastDisc">
+              <input ngModel type='radio' value='3' name='disc' id="leastDisc">
             </div>
             <div class="row">
               <label for="leastDiscPerGame">Overall Least Discipline Per Game</label>
-              <input ngModel type='radio' value='4' name='leastDiscPG' id="leastDiscPerGame">
+              <input ngModel type='radio' value='4' name='disc' id="leastDiscPerGame">
             </div>
             <div class="row">
               <label for="noDiscPref">No Preference</label>
-              <input ngModel type='radio' value='0' name='noDiscPref' id="noDiscPref">
+              <input ngModel type='radio' value='0' name='disc' id="noDiscPref">
             </div>
             <div class="row">
               <h3>Experience</h3>
             </div>
             <div class="row">
               <label for="mostExp">Most Experienced</label>
-              <input ngModel type='checkbox' value='1' name='mostExp' id="mostExp">
+              <input ngModel type='radio' value='1' name='xp' id="mostExp">
             </div>
             <div class="row">
               <label for="leastExp">Least Experienced</label>
-              <input ngModel type='checkbox' value='2' name='leastExp' id="leastExp">
+              <input ngModel type='radio' value='2' name='xp' id="leastExp">
             </div>
             <div class="row">
               <label for="noExpPref">No Preference</label>
-              <input ngModel type='checkbox' value='0' name='noExpPref' id="noExpPref">
+              <input ngModel type='radio' value='0' name='xp' id="noExpPref">
             </div>
           </div>
         </div>

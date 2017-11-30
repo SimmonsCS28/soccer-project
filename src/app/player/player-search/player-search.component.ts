@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { PlayerSearchService } from './player-search-service';
 
 @Component({
   selector: 'app-player-search',
@@ -14,18 +15,21 @@ export class PlayerSearchComponent implements OnInit {
   @ViewChild('playerSearchForm') public playerSearchForm: NgForm;
   public url: string = "http://washington.uww.edu/cs366/houshce29/db/data_fetch.php";
 
-  constructor(private http: HttpClient) { }
+  public response: any;
+
+  constructor(
+    private http: HttpClient,
+    private playerService: PlayerSearchService) { }
 
   ngOnInit() {
   }
 
   public playerSearchSubmit() {
-    console.log(this.playerSearchForm.value.noExpPref);
-    this.http.get(this.url).subscribe(response => {
-      console.log(response);
-    }),
-      (err: HttpErrorResponse) => {
-        console.log(err);
-      };
+
+    // this.playerService.getPlayersBySearchForm();
+    console.log(this.playerSearchForm.value);
+    this.response = this.http.get(this.url).subscribe((res: Response) => {
+      res.json();
+    })
   }
 }
