@@ -106,4 +106,32 @@ function getByMisc(){
   echo getJSON($sql, $data);
 }
 
+/**
+  Gets the club stats as a JSON object
+*/
+function getClubStats(){
+  $data = array(':team' => 'FC Barcelona');
+  if(isset($_GET['team'])){
+    $data[':team'] = $_GET['team'];
+  }
+  $sql = "SELECT worldRanking, colors, leagueName FROM Club WHERE clubName=:team;";
+  echo getJSON($sql, $data);
+}
+
+/**
+  Gets the stats for a specific team as a JSON object
+*/
+function getPlayerStats(){
+  $data = array(':team' => 'FC Barcelona');
+  if(isset($_GET['team'])){
+    $data[':team'] = $_GET['team'];
+  }
+  $sql = "SELECT playerName, position, gamesPlayed, goalsScored, (goalsScored/gamesPlayed),
+            yellowCards, redCards
+          FROM Player
+          WHERE clubName=:team;";
+  echo getJSON($sql, $data);
+}
+
+
 ?>
