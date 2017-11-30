@@ -3,6 +3,9 @@ import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { PlayerSearchService } from './player-search-service';
+import { RequestMethod } from '@angular/http/src/enums';
+import { HttpParams } from '@angular/common/http';
+import { RequestOptions } from '@angular/http/src/base_request_options';
 
 @Component({
   selector: 'app-player-search',
@@ -13,9 +16,10 @@ import { PlayerSearchService } from './player-search-service';
 export class PlayerSearchComponent implements OnInit {
 
   @ViewChild('playerSearchForm') public playerSearchForm: NgForm;
-  public url: string = "http://washington.uww.edu/cs366/houshce29/db/data_fetch.php";
+  public url: string = "http://washington.uww.edu/cs366/houshce29/db/data_fetch.php?type=byplayer&disc=2";
 
   public response: any;
+  
 
   constructor(
     private http: HttpClient,
@@ -26,10 +30,17 @@ export class PlayerSearchComponent implements OnInit {
 
   public playerSearchSubmit() {
 
-    // this.playerService.getPlayersBySearchForm();
+    const requestOptions = {
+      params: new HttpParams()
+    };
+    requestOptions.params.append("type", "byplayer");
+    requestOptions.params.append("disc", "2");
+    console.log(requestOptions.params);
+    this.playerSearchForm.value.type = 'type';
+    // this.playerService.getPlayersBySearchForm(); 
     console.log(this.playerSearchForm.value);
     this.response = this.http.get(this.url).subscribe((res: Response) => {
-      res.json();
+     console.log(res);
     })
   }
 }

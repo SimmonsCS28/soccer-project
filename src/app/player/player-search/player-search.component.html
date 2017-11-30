@@ -4,7 +4,7 @@
       <form #playerSearchForm="ngForm" (ngSubmit)="playerSearchSubmit()" id="playerSearchForm">
         <div id="player-data">
           <div class="form-group">
-            <input type='hidden' value='byclub' name='type'>
+            <input ngModel type='hidden' value='byplayer' name='type'>
             <div class="row">
               <h3>Goal Scoring</h3>
             </div>
