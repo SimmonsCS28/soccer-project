@@ -1,75 +1,72 @@
-<div class="container-fluid" id="club-search-container">
-  <div class="col-xs-12" style="text-align:center;">
-    <form #clubSearch="ngForm" id="clubSearchForm" method='post' action='http://washington.uww.edu/cs366/houshce29/db/data_fetch.php'>
-      <div id="club-data">
-        <div class="form-group">
-          <input type='hidden' value='byclub' name='type'>
-          <div class="row">
-            <h3>Goal Scoring</h3>
-          </div>
-          <div class="row">
-            <label for="overallTopScorers">Overall Top Scorers</label>
-            <input type="radio" value="1" name="goals" id="overallTopScorers">
-          </div>
-          <div class="row">
-            <label for="topGoalsPerGame">Overall Top Goals Per Game</label>
-            <input type="radio" value="2" name="goals" id="topGoalsPerGame">
-          </div>
-          <div class="row">
-            <label for="noGoalsPref">No Preference</label>
-            <input type="radio" value="0" name="goals" id="noGoalsPref">
-          </div>
-          <div class="row">
-            <h3>Discipline/Foul Play</h3>
-          </div>
-          <div class="row">
-            <label for="overallTopDisc">Overall top discipline</label>
-            <input type='radio' value='1' name='disc' id="overallTopDisc">
-          </div>
-          <div class="row">
-            <label for="topDiscPerGame">Overall top discipline per game</label>
-            <input type='radio' value='2' name='disc' id="topDiscPerGame">
-          </div>
-          <div class="row">
-            <label for="overallLeastDisc">Overall least discipline</label>
-            <input type='radio' value='3' name='disc' id="overallLeastDisc">
-          </div>
-          <div class="row">
-            <label for="leastDiscPerGame">Overall least discipline per game</label>
-            <input type='radio' value='4' name='disc' id="leastDiscPerGame">
-          </div>
-          <div class="row">
-            <label for="noDiscPref">No Preference</label>
-            <input type='radio' value='0' name='disc' id="noDiscPref">
-          </div>
-          <div class="row">
-            <h3>Experience</h3>
-          </div>
-          <div class="row">
-            <label for="mostExp">Most experienced</label>
-            <input type='radio' value='3' name='disc' id="mostExp">
-          </div>
-          <div class="row">
-            <label for="leastExp">Least experienced</label>
-            <input type='radio' value='4' name='disc' id="leastExp">
-          </div>
-          <div class="row">
-            <label for="noExpPref">No Preference</label>
-            <input type='radio' value='0' name='disc' id="noExpPref">
+<div class="container" id="club-search-container">
+  <div class="row">
+    <div class="col-xs-8" style="text-align:center; margin-left: 13em;">
+      <form #clubSearchForm="ngForm" (ngSubmit)="clubSearchSubmit()"id="clubSearchForm">
+        <div id="club-data">
+          <div class="form-group">
+            <input ngModel type='hidden' value='byclub' name='type'>
+            <div class="row">
+              <h3>Goal Scoring</h3>
+            </div>
+            <div class="row">
+              <label for="overallTopScorers">Overall Top Scorers</label>
+              <input ngModel type="radio" value="1" name="goals" id="overallTopScorers">
+            </div>
+            <div class="row">
+              <label for="topGoalsPerGame">Overall Top Goals Per Game</label>
+              <input ngModel type="radio" value="2" name="goals" id="topGoalsPerGame">
+            </div>
+            <div class="row">
+              <label for="noGoalsPref">No Preference</label>
+              <input ngModel type="radio" value="0" name="goals" id="noGoalsPref">
+            </div>
+            <div class="row">
+              <h3>Discipline/Foul Play</h3>
+            </div>
+            <div class="row">
+              <label for="overallTopDisc">Overall top discipline</label>
+              <input ngModel type='radio' value='1' name='disc' id="overallTopDisc">
+            </div>
+            <div class="row">
+              <label for="topDiscPerGame">Overall top discipline per game</label>
+              <input ngModel type='radio' value='2' name='disc' id="topDiscPerGame">
+            </div>
+            <div class="row">
+              <label for="overallLeastDisc">Overall least discipline</label>
+              <input ngModel type='radio' value='3' name='disc' id="overallLeastDisc">
+            </div>
+            <div class="row">
+              <label for="leastDiscPerGame">Overall least discipline per game</label>
+              <input ngModel type='radio' value='4' name='disc' id="leastDiscPerGame">
+            </div>
+            <div class="row">
+              <label for="noDiscPref">No Preference</label>
+              <input ngModel type='radio' value='0' name='disc' id="noDiscPref">
+            </div>
+            <div class="row">
+              <h3>Experience</h3>
+            </div>
+            <div class="row">
+              <label for="mostExp">Most experienced</label>
+              <input ngModel type='radio' value='1' name='xp' id="mostExp">
+            </div>
+            <div class="row">
+              <label for="leastExp">Least experienced</label>
+              <input ngModel type='radio' value='2' name='xp' id="leastExp">
+            </div>
+            <div class="row">
+              <label for="noExpPref">No Preference</label>
+              <input ngModel type='radio' value='0' name='xp' id="noExpPref">
+            </div>
           </div>
         </div>
-      </div>
-      <input type='submit' value='Submit'>
-      <div>
-        <button class="btn btn-lg btn-success" type="submit" id="club-search-submit">Search</button>
-      </div>
-    </form>
-    <!-- <form id="clubSearchForm" method='post' action='http://washington.uww.edu/cs366/houshce29/db/data_fetch.php'>
-
-      <input type='hidden' value='byclub' name='type'>
-
-      <input type='submit' value='Submit'>
-
-    </form> -->
+        <div>
+          <button class="btn btn-lg btn-success" type="submit" id="club-search-submit">Search</button>
+        </div>
+        <div>
+          <button class="btn btn-sm btn-warning" type="reset">Reset Form</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

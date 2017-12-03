@@ -1,23 +1,22 @@
-
-
 #clubSearchForm {
     background-color: rgba(26, 26, 26, 0.911);
 }
 
-#club-search-container {
-    margin-top: 10em;
-    width: 500px;
-}
-
 #club-data {
     margin: 20px;
-    text-align: center;
 }
 
-#club-search-submit {
+#club-search-container {
+    margin-top: 4em;
+}
+
+.btn{
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 20px;
+}
+
+h3 {
+    color: white;
 }
 
 label {
@@ -25,14 +24,3 @@ label {
     margin: 10px;
 }
 
-select {
-    max-width: 400px;
-}
-
-b {
-    color: white;
-}
-
-h3 {
-    color: white;
-}
