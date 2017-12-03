@@ -16,7 +16,8 @@ import { PlayerSearchComponent } from './player/player-search/player-search.comp
 import { PlayerSearchModule } from './player/player-search/player-search.module';
 import { AchievementComponent } from './achievement/achievement.component';
 import { AchievementSearchComponent } from './achievement/achievement-search/achievement-search.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
+import { PlayerSearchService } from './player/player-search/player-search-service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,10 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [DBService],
+  providers: [
+    DBService,
+    PlayerSearchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
