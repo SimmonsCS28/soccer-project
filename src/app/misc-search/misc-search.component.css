@@ -1,0 +1,39 @@
+#miscSearchForm {
+    background-color: rgba(26, 26, 26, 0.911);
+}
+
+#misc-data {
+    margin: 20px;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#misc-search-header {
+    background-color: rgba(26, 26, 26, 0.911);
+    margin: 0;
+}
+
+label {
+    color: white;
+    margin: 10px;
+}
+
+#misc-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 3em;
+}
+
+th {
+    text-align: center;
+}
+
+#misc-table-div{
+    outline-color: gray;
+    outline-style: solid;
+    background-color: rgba(26, 26, 26, 0.911);
+}

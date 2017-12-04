@@ -21,7 +21,7 @@ export class MiscSearchComponent implements OnInit {
 
   ngOnInit() {
   }
-  public playerSearchSubmit() {
+  public miscSearchSubmit() {
     this.miscSearchForm.value.type = 'bymisc';
     this.miscService.getByMisc(this.miscSearchForm.value).subscribe((res: any[]) => {
       this.handlePlayerResults(res);
