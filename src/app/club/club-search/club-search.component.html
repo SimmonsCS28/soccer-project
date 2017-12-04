@@ -1,7 +1,7 @@
 <div class="container" id="club-search-container">
   <div class="row">
     <div class="col-xs-8" style="text-align:center; margin-left: 13em;">
-      <form #clubSearchForm="ngForm" (ngSubmit)="clubSearchSubmit()"id="clubSearchForm">
+      <form *ngIf="!formToggle" #clubSearchForm="ngForm" (ngSubmit)="clubSearchSubmit()" id="clubSearchForm" class="collapse in">
         <div id="club-data">
           <div class="form-group">
             <input ngModel type='hidden' value='byclub' name='type'>
@@ -24,19 +24,19 @@
               <h3>Discipline/Foul Play</h3>
             </div>
             <div class="row">
-              <label for="overallTopDisc">Overall top discipline</label>
+              <label for="overallTopDisc">Overall Top Discipline</label>
               <input ngModel type='radio' value='1' name='disc' id="overallTopDisc">
             </div>
             <div class="row">
-              <label for="topDiscPerGame">Overall top discipline per game</label>
+              <label for="topDiscPerGame">Overall Top Discipline Per Game</label>
               <input ngModel type='radio' value='2' name='disc' id="topDiscPerGame">
             </div>
             <div class="row">
-              <label for="overallLeastDisc">Overall least discipline</label>
+              <label for="overallLeastDisc">Overall Least Discipline</label>
               <input ngModel type='radio' value='3' name='disc' id="overallLeastDisc">
             </div>
             <div class="row">
-              <label for="leastDiscPerGame">Overall least discipline per game</label>
+              <label for="leastDiscPerGame">Overall Least Discipline Per Game</label>
               <input ngModel type='radio' value='4' name='disc' id="leastDiscPerGame">
             </div>
             <div class="row">
@@ -47,11 +47,11 @@
               <h3>Experience</h3>
             </div>
             <div class="row">
-              <label for="mostExp">Most experienced</label>
+              <label for="mostExp">Most Experienced</label>
               <input ngModel type='radio' value='1' name='xp' id="mostExp">
             </div>
             <div class="row">
-              <label for="leastExp">Least experienced</label>
+              <label for="leastExp">Least Experienced</label>
               <input ngModel type='radio' value='2' name='xp' id="leastExp">
             </div>
             <div class="row">
@@ -64,9 +64,24 @@
           <button class="btn btn-lg btn-success" type="submit" id="club-search-submit">Search</button>
         </div>
         <div>
-          <button class="btn btn-sm btn-warning" type="reset">Reset Form</button>
+          <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()">Reset Form</button>
         </div>
       </form>
+      <div *ngIf="clubs" id="table-div">
+        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+        <table class="table" id="club-table">
+          <thead>
+            <tr>
+              <th>Club</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let club of clubs">
+              <td>{{club.club}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

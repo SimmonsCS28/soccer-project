@@ -17,7 +17,10 @@ import { PlayerSearchModule } from './player/player-search/player-search.module'
 import { AchievementComponent } from './achievement/achievement.component';
 import { AchievementSearchComponent } from './achievement/achievement-search/achievement-search.component';
 import { HttpClientModule } from '@angular/common/http'
+import { XHRBackend, HttpModule } from '@angular/http'
 import { PlayerSearchService } from './player/player-search/player-search-service';
+import { ClubSearchService } from './club/club-search/club-search.service';
+
 
 @NgModule({
   declarations: [
@@ -38,11 +41,14 @@ import { PlayerSearchService } from './player/player-search/player-search-servic
     ClubSearchModule,
     PlayerSearchModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpModule
   ],
   providers: [
     DBService,
-    PlayerSearchService
+    PlayerSearchService,
+    ClubSearchService,
+    XHRBackend
   ],
   bootstrap: [AppComponent]
 })

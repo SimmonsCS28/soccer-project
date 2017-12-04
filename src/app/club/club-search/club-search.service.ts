@@ -1,19 +1,19 @@
 import { Injectable } from "@angular/core";
-import { Player } from "../player-model";
+import { Club } from "../club-model";
 import { Http, Response } from '@angular/http';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/Rx'
 
 
 @Injectable()
-export class PlayerSearchService {
+export class ClubSearchService {
 
     public url: string = "http://washington.uww.edu/cs366/houshce29/db/data_fetch.php";
 
     constructor(private http: Http) {
     }
 
-    public getPlayersBySearchForm(searchInput: string): Observable<Player[]> {
+    public getClubsBySearchForm(searchInput: string): Observable<Club[]> {
         console.log(searchInput);
         return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
             return res.json();

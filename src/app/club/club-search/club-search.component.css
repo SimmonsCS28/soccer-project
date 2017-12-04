@@ -24,3 +24,20 @@ label {
     margin: 10px;
 }
 
+#club-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 3em;
+}
+
+th {
+    text-align: center;
+}
+
+#table-div{
+    outline-color: gray;
+    outline-style: solid;
+    background-color: rgba(26, 26, 26, 0.911);
+}
+
