@@ -1,0 +1,49 @@
+<div class="container" id="misc-search-container">
+    <div class="row">
+      <div class="col-sm-8" style="text-align: center; margin-left: 13em;">
+          <h1 id="misc-search-header">Miscellaneous Search</h1>
+          <p>Select an option from one or more categories to find clubs based on other club info.</p>
+        <form *ngIf="!formToggle" #miscSearchForm="ngForm" (ngSubmit)="miscSearchSubmit()" id="miscSearchForm">
+          <div id="misc-data">
+            <div class="form-group">
+              <div class="row">
+                <h3>Color</h3>
+              </div>
+              <div class="row">
+                <label for="mostTrophies">Color</label>
+                <input ngModel type='radio' value='1' name='color' id="club-color">
+              </div>
+              <div class="row">
+                  <h3>Region</h3>
+                </div>
+              <div class="row">
+                <label for="highestGA">Regions</label>
+                <input ngModel type='radio' value='2' name='region' id="club-region">
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-lg btn-success" id="misc-search-submit-button" type="submit">Search</button>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="miscSearchForm.pristine">Reset Form</button>
+          </div>
+        </form>
+        <div *ngIf="misc" id="misc-table-div">
+          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+          <table class="table" id="misc-table">
+            <thead>
+              <tr>
+                <th>Club</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let attribute of attributes">
+                <td>{{award.club}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

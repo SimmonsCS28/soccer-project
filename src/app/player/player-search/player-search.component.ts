@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Response } from '@angular/http'
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Response, Http } from '@angular/http'
 import { PlayerSearchService } from './player-search-service';
 import { RequestMethod } from '@angular/http/src/enums';
 import { HttpParams } from '@angular/common/http';
@@ -18,9 +17,11 @@ import { Player } from '../player-model';
 export class PlayerSearchComponent implements OnInit {
 
   @ViewChild('playerSearchForm') public playerSearchForm: NgForm;
+  public players: Player[];
+  public formToggle: Boolean = false;
 
   constructor(
-    private http: HttpClient,
+    private http: Http,
     private playerService: PlayerSearchService) { }
 
   ngOnInit() {
@@ -33,7 +34,19 @@ export class PlayerSearchComponent implements OnInit {
     });
   }
 
-  private handlePlayerResults(players: Player[]) {
-    console.log(players);
+  private handlePlayerResults(resp: Player[]) {
+    console.log(resp);
+    if(resp){
+      this.players = resp;
+      this.formToggle = true;
+    }
+  }
+
+  public toggleForm() {
+    this.formToggle = false;
+  }
+
+  public resetTable() {
+    this.players = undefined;
   }
 }

@@ -6,17 +6,14 @@
     margin: 20px;
 }
 
-#club-search-container {
-    margin-top: 4em;
-}
-
 .btn{
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-h3 {
-    color: white;
+#club-search-header {
+    background-color: rgba(26, 26, 26, 0.911);
+    margin: 0;
 }
 
 label {

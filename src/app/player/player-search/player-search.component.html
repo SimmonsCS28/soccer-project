@@ -1,7 +1,9 @@
 <div class="container" id="player-search-container">
   <div class="row">
     <div class="col-sm-8" style="text-align: center; margin-left: 13em;">
-      <form #playerSearchForm="ngForm" (ngSubmit)="playerSearchSubmit()" id="playerSearchForm">
+        <h1 id="player-search-header">Player Search</h1>
+        <p>Select an option from one or more categories to find players you might be interested in.</p>
+      <form *ngIf="!formToggle" #playerSearchForm="ngForm" (ngSubmit)="playerSearchSubmit()" id="playerSearchForm">
         <div id="player-data">
           <div class="form-group">
             <input ngModel type='hidden' value='byplayer' name='type'>
@@ -19,9 +21,6 @@
             <div class="row">
               <label for="noGoalsPref">No Preference</label>
               <input ngModel type='radio' value='0' name='goals' id="noGoalsPref">
-            </div>
-            <div class="row">
-
             </div>
             <div class="row">
               <h3>Discipline/Foul Play</h3>
@@ -67,9 +66,26 @@
           <button class="btn btn-lg btn-success" id="player-search-submit-button" type="submit">Search</button>
         </div>
         <div>
-          <button class="btn btn-sm btn-warning" type="reset">Reset Form</button>
+          <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="playerSearchForm.pristine">Reset Form</button>
         </div>
       </form>
+      <div *ngIf="players" id="player-table-div">
+          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+          <table class="table" id="player-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Club</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let player of players">
+                <td>{{player.player}}</td>
+                <td>{{player.club}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
   </div>
 </div>

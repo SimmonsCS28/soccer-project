@@ -1,3 +1,4 @@
+import { AchievementService } from './achievement/achievement-search/achievement.service';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,10 @@ import { HttpClientModule } from '@angular/common/http'
 import { XHRBackend, HttpModule } from '@angular/http'
 import { PlayerSearchService } from './player/player-search/player-search-service';
 import { ClubSearchService } from './club/club-search/club-search.service';
+import { AchievementSearchModule } from './achievement/achievement-search/achievement-search.module';
+import { MiscSearchComponent } from './misc-search/misc-search.component';
+import { MiscSearchModule } from './misc-search/misc-search.module';
+import { MiscSearchService } from './misc-search/misc-search.service';
 
 
 @NgModule({
@@ -32,7 +37,8 @@ import { ClubSearchService } from './club/club-search/club-search.service';
     PlayerComponent,
     PlayerSearchComponent,
     AchievementComponent,
-    AchievementSearchComponent
+    AchievementSearchComponent,
+    MiscSearchComponent
 
   ],
   imports: [
@@ -40,6 +46,8 @@ import { ClubSearchService } from './club/club-search/club-search.service';
     AppRoutingModule,
     ClubSearchModule,
     PlayerSearchModule,
+    AchievementSearchModule,
+    MiscSearchModule,
     FormsModule,
     HttpClientModule,
     HttpModule
@@ -48,6 +56,8 @@ import { ClubSearchService } from './club/club-search/club-search.service';
     DBService,
     PlayerSearchService,
     ClubSearchService,
+    AchievementService,
+    MiscSearchService,
     XHRBackend
   ],
   bootstrap: [AppComponent]

@@ -6,20 +6,34 @@
     margin: 20px;
 }
 
-#achievement-search-container {
-    margin-top: 4em;
-}
-
 .btn{
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-h3 {
-    color: white;
+#achievement-search-header {
+    background-color: rgba(26, 26, 26, 0.911);
+    margin: 0;
 }
 
 label {
     color: white;
     margin: 10px;
+}
+
+#achievement-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 3em;
+}
+
+th {
+    text-align: center;
+}
+
+#achievements-table-div{
+    outline-color: gray;
+    outline-style: solid;
+    background-color: rgba(26, 26, 26, 0.911);
 }

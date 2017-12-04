@@ -1,5 +1,4 @@
 export class Player {
-    name: string;
-    goals: number;
-    discipline: number; 
+    player: string;
+    club: string;
 }

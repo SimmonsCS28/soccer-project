@@ -1,7 +1,9 @@
 <div class="container" id="achievement-search-container">
   <div class="row">
     <div class="col-sm-8" style="text-align: center; margin-left: 13em;">
-      <form #achievementSearchForm="ngForm" (ngSubmit)="achievementSearchSubmit()" id="achievementSearchForm">
+        <h1 id="achievement-search-header">Achievement Search</h1>
+        <p>Select an option from one or more categories to find clubs based on their achievements.</p>
+      <form *ngIf="!formToggle" #achievementSearchForm="ngForm" (ngSubmit)="achievementSearchSubmit()" id="achievementSearchForm">
         <div id="achievement-data">
           <div class="form-group">
             <div class="row">
@@ -37,9 +39,24 @@
           <button class="btn btn-lg btn-success" id="player-search-submit-button" type="submit">Search</button>
         </div>
         <div>
-          <button class="btn btn-sm btn-warning" type="reset">Reset Form</button>
+          <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="achievementSearchForm.pristine">Reset Form</button>
         </div>
       </form>
+      <div *ngIf="achievements" id="achievements-table-div">
+        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+        <table class="table" id="achievement-table">
+          <thead>
+            <tr>
+              <th>Club</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let award of achievements">
+              <td>{{award.club}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
