@@ -113,7 +113,10 @@ function getClubStats(){
   if(isset($_GET['team'])){
     $data[':team'] = $_GET['team'];
   }
-  $sql = "SELECT * FROM Club WHERE clubName=:team;";
+  $sql = "SELECT c.clubName, colors, worldRanking, leagueName,
+                logo, website
+          FROM Club c, ClubInfo i WHERE c.clubName=i.clubName
+          AND c.clubName=:team;";
   echo getJSON($sql, $data);
 }
 
