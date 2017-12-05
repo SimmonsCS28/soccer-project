@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS findClubByPlayer;
 DELIMITER $$
 
 CREATE PROCEDURE findClubByPlayer(goalsChoice INT(1), discChoice INT(1), xpChoice INT(1))
@@ -94,8 +95,9 @@ CREATE PROCEDURE findClubByPlayer(goalsChoice INT(1), discChoice INT(1), xpChoic
 	   OR (goalsChoice = 0 AND discChoice = 0 AND xpChoice <> 0) THEN
 	    SELECT player, club FROM PlayerClub LIMIT 5;
 	ELSE
-		SELECT DISTINCT player, club
-		FROM PlayerClub
+		SELECT DISTINCT player, club, logo, website
+		FROM PlayerClub, ClubInfo
+        WHERE club = clubName
 		GROUP BY player
 		ORDER BY COUNT(player) DESC
 		LIMIT 5;
