@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS findClubByAchievement;
 DELIMITER $$
 CREATE PROCEDURE findClubByAchievement(t BOOLEAN, hga BOOLEAN, lga BOOLEAN, top BOOLEAN, hwp BOOLEAN, llp BOOLEAN)
 BEGIN
@@ -82,12 +83,14 @@ BEGIN
 		(NOT t AND NOT hga AND NOT lga AND top AND NOT hwp AND NOT llp) OR
 		(NOT t AND NOT hga AND NOT lga AND NOT top AND hwp AND NOT llp) OR
 		(NOT t AND NOT hga AND NOT lga AND NOT top AND NOT hwp AND llp) THEN	  
-	    SELECT *
-	    FROM ClubCount
+	    SELECT club, logo, website
+	    FROM ClubCount, ClubInfo
+        WHERE club=clubName
 	    LIMIT 5;
 	  ELSE
-	  	SELECT *
-	    FROM ClubCount
+	  	SELECT club, logo, website
+	    FROM ClubCount, ClubInfo
+        WHERE club=clubName
 	    GROUP BY ClubCount.club
 	    ORDER BY COUNT(*) DESC
 	    LIMIT 5;
@@ -95,4 +98,4 @@ BEGIN
 	  DROP TABLE ClubCount;
 	  
 END $$
-DELIMITER ;
+DELIMITER ; 
