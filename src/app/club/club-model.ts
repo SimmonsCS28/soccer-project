@@ -1,5 +1,5 @@
 export class Club {
-    name: string;
-    goals: number;
-    discipline: number; 
+    club: string;
+    logo: string;
+    website: string; 
 }

@@ -1,8 +1,8 @@
 import { NgForm } from '@angular/forms';
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
-import { Http } from '@angular/http'
 import { ClubSearchService } from './club-search.service';
 import { Club } from '../club-model'
+import { ClubSearchModel } from './club-search.model';
 
 @Component({
   selector: 'app-club-search',
@@ -13,12 +13,12 @@ import { Club } from '../club-model'
 export class ClubSearchComponent implements OnInit {
   @ViewChild('clubSearchForm') public clbSrchForm: NgForm
 
-  public url: string = "http://washington.uww.edu/cs366/houshce29/db/data_fetch.php";
+  public clubSearchObject = new ClubSearchModel();
+
   public clubs: Club[];
   public formToggle: Boolean = false;
 
   constructor(
-    private http: Http,
     private clubService: ClubSearchService) {
   }
 
@@ -38,11 +38,17 @@ export class ClubSearchComponent implements OnInit {
       this.formToggle = true;
     }
     
-    console.log(this.clubs);
+    console.log(this.clubs[1].club);
   }
 
-  private getClub(club: Club) {
-    this.clubService.getClub(club);
+  private getClub() {
+    this.clubSearchObject.type = 'getclub';
+    const encodedClubName: string = encodeURIComponent('Athletic Bilbao');
+    this.clubSearchObject.clubName = encodedClubName;
+    this.clubService.getClub(this.clubSearchObject).subscribe((res: Club) => {
+      console.log(res);
+    });
+
   }
 
   public toggleForm() {

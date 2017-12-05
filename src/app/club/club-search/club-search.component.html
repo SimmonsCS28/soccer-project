@@ -68,6 +68,9 @@
         <div>
           <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="clubSearchForm.pristine">Reset Form</button>
         </div>
+        <div>
+          <button class="btn btn-sm btn-danger" type="submit" (click)="getClub()">Get Clubs</button>
+        </div>
       </form>
       <div *ngIf="clubs" id="table-div">
         <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
@@ -78,7 +81,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngIf="clubs" *ngFor="let club of clubs" value="club.club">
+            <tr *ngFor="let club of clubs">
               <td>{{club.club}}</td> 
             </tr>
           </tbody>

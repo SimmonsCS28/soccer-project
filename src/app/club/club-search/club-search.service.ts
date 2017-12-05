@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
 import { Club } from "../club-model";
-import { Http, Response } from '@angular/http';
+import { Http, Response, RequestOptions } from '@angular/http';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/Rx'
+import { ClubSearchModel } from "./club-search.model";
 
 
 @Injectable()
@@ -22,8 +23,7 @@ export class ClubSearchService {
         })
     }
 
-    public getClub(club: Club): Observable<Club> {
-        console.log(club);
+    public getClub(club: ClubSearchModel): Observable<Club> {
         return this.http.get(this.url, {params: club}).map((res: Response) => {
             return res.json();
         }).catch((err: Error) => {
