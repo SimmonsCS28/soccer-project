@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS findClubByMisc;
 DELIMITER $$
 
 CREATE PROCEDURE findClubByMisc(color VARCHAR(20), location VARCHAR(30))
@@ -35,8 +36,9 @@ BEGIN
 		ORDER BY clubName;
 	  END IF;
 	  
-	  SELECT *
-	  FROM ClubCount
+	  SELECT club, logo, website
+	  FROM ClubCount, ClubInfo
+      WHERE club=clubName
 	  GROUP BY ClubCount.club
 	  ORDER BY COUNT(*) DESC
 	  LIMIT 5;
