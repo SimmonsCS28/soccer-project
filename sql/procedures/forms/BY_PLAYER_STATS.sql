@@ -93,7 +93,7 @@ CREATE PROCEDURE findClubByPlayer(goalsChoice INT(1), discChoice INT(1), xpChoic
 	IF (goalsChoice <> 0 AND discChoice = 0 AND xpChoice = 0)
 	   OR (goalsChoice = 0 AND discChoice <> 0 AND xpChoice = 0)
 	   OR (goalsChoice = 0 AND discChoice = 0 AND xpChoice <> 0) THEN
-	    SELECT player, club FROM PlayerClub LIMIT 5;
+	    SELECT player, club, logo, website FROM PlayerClub, ClubInfo WHERE club=clubName LIMIT 5;
 	ELSE
 		SELECT DISTINCT player, club, logo, website
 		FROM PlayerClub, ClubInfo
@@ -106,4 +106,4 @@ CREATE PROCEDURE findClubByPlayer(goalsChoice INT(1), discChoice INT(1), xpChoic
 	DROP TABLE PlayerClub;
   END$$
   
-DELIMITER ; 
+DELIMITER ;
