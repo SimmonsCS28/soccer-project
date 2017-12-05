@@ -78,8 +78,8 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let club of clubs">
-              <td>{{club.club}}</td>
+            <tr *ngIf="clubs" *ngFor="let club of clubs" value="club.club">
+              <td>{{club.club}}</td> 
             </tr>
           </tbody>
         </table>

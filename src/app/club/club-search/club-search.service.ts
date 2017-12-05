@@ -21,4 +21,13 @@ export class ClubSearchService {
             return Observable.throw('The server returned an error message ' + err.message);
         })
     }
+
+    public getClub(club: Club): Observable<Club> {
+        console.log(club);
+        return this.http.get(this.url, {params: club}).map((res: Response) => {
+            return res.json();
+        }).catch((err: Error) => {
+            return Observable.throw('The server returned an error message ' + err.message);
+        })
+    }
 }

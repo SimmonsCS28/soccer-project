@@ -37,4 +37,7 @@ th {
     outline-style: solid;
     background-color: rgba(26, 26, 26, 0.911);
 }
+#clickable {
+    cursor: pointer;
+}
 

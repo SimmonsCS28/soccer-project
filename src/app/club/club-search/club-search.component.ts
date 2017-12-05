@@ -41,6 +41,10 @@ export class ClubSearchComponent implements OnInit {
     console.log(this.clubs);
   }
 
+  private getClub(club: Club) {
+    this.clubService.getClub(club);
+  }
+
   public toggleForm() {
     this.formToggle = false;
   }
