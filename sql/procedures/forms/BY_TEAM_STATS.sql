@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS findClubByStats;
 DELIMITER $$
 CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice INT(1))
   BEGIN
@@ -133,10 +134,11 @@ CREATE PROCEDURE findClubByStats(goalsChoice INT(1), discChoice INT(1), xpChoice
 	IF (goalsChoice <> 0 AND discChoice = 0 AND xpChoice = 0)
 	   OR (goalsChoice = 0 AND discChoice <> 0 AND xpChoice = 0)
 	   OR (goalsChoice = 0 AND discChoice = 0 AND xpChoice <> 0) THEN
-	    SELECT * FROM ClubCount LIMIT 5;
+	    SELECT club, logo, website FROM ClubCount, ClubInfo WHERE club=clubName LIMIT 5;
 	ELSE
-		SELECT *
-		FROM ClubCount
+		SELECT club, logo, website
+		FROM ClubCount, ClubInfo
+        WHERE club=clubName
 		GROUP BY ClubCount.club
 		ORDER BY COUNT(*) DESC
 		LIMIT 5;
