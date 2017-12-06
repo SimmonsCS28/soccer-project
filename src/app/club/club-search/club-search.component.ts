@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, ViewChild, Output, EventEmitter, } from '@angular/core';
 import { ClubSearchService } from './club-search.service';
 import { Club } from '../club-model'
 import { ClubSearchModel } from './club-search.model';
@@ -12,11 +12,14 @@ import { ClubSearchModel } from './club-search.model';
 })
 export class ClubSearchComponent implements OnInit {
   @ViewChild('clubSearchForm') public clbSrchForm: NgForm
+  @Output()sendClubDetails: EventEmitter<Club> = new EventEmitter<Club>();
 
   public clubSearchObject = new ClubSearchModel();
 
   public clubs: Club[];
+  public individualClub = new Club();
   public formToggle: Boolean = false;
+  public clubFound: Boolean = false;
 
   constructor(
     private clubService: ClubSearchService) {
@@ -37,22 +40,31 @@ export class ClubSearchComponent implements OnInit {
       this.clubs = resp;
       this.formToggle = true;
     }
-    
-    console.log(this.clubs[1].club);
   }
 
-  private getClub() {
+  private getClub(cName: string) {
     this.clubSearchObject.type = 'getclub';
-    const encodedClubName: string = encodeURIComponent('Athletic Bilbao');
-    this.clubSearchObject.clubName = encodedClubName;
+    // const encodedClubName: string = encodeURIComponent(cName);
+    // console.log(encodedClubName);
+    this.clubSearchObject.team = cName;
     this.clubService.getClub(this.clubSearchObject).subscribe((res: Club) => {
-      console.log(res);
+      if(res) {
+        this.individualClub.clubName = res[0].clubName;
+        this.individualClub.colors = res[0].colors;
+        this.individualClub.leagueName = res[0].leagueName;
+        this.individualClub.worldRanking = res[0].worldRanking;
+        this.individualClub.website = res[0].website;
+        this.clubFound = true;
+        this.clubs = undefined;
+        this.sendClubDetails.emit(res);
+      }
     });
 
   }
 
   public toggleForm() {
     this.formToggle = false;
+    this.clubFound = false;
   }
 
   public resetTable() {

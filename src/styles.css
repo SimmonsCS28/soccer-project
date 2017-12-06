@@ -17,3 +17,5 @@ p {
     background-color: rgba(26,26,26,0.911);
     color: white;
 }
+
+tr:hover td {background:rgb(92, 92, 92)}

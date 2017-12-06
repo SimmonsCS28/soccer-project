@@ -25,6 +25,8 @@ import { AchievementSearchModule } from './achievement/achievement-search/achiev
 import { MiscSearchComponent } from './misc-search/misc-search.component';
 import { MiscSearchModule } from './misc-search/misc-search.module';
 import { MiscSearchService } from './misc-search/misc-search.service';
+import { ClubComponent } from './club/club.component';
+import { ClubModule } from './club/club.module';
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { MiscSearchService } from './misc-search/misc-search.service';
     DashboardComponent,
     SidebarComponent,
     HeaderComponent,
+    ClubComponent,
     ClubSearchComponent,
     PlayerComponent,
     PlayerSearchComponent,
@@ -44,6 +47,7 @@ import { MiscSearchService } from './misc-search/misc-search.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ClubModule,
     ClubSearchModule,
     PlayerSearchModule,
     AchievementSearchModule,

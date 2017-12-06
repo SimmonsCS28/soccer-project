@@ -1,5 +1,8 @@
 export class Club {
-    club: string;
-    logo: string;
-    website: string; 
+    clubName?: string;
+    colors?: string;
+    worldRanking?: string;
+    leagueName?: string;
+    logo?: string;
+    website?: string; 
 }

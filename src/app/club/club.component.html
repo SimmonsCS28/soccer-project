@@ -1,3 +1,24 @@
-<p>
-  club works!
-</p>
+<div class="container" id="club-search-container">
+  <app-club-search (sendClubDetails)="handleClubInfo($event)">
+  </app-club-search>
+  <div class="row">
+    <div class="col-xs-8" style="text-align:center; margin-left: 13em;">
+      <h1 id="club-search-header">Club Search</h1>
+      <div *ngIf="clubs" id="table-div">
+        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+        <table class="table" id="club-table">
+          <thead>
+            <tr>
+              <th>Club</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{club.club}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
