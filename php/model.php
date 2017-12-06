@@ -146,4 +146,16 @@ function getClubList(){
   echo getJSON($sql);
 }
 
+/**
+  Returns a single player's stats
+*/
+function getPlayer(){
+  $data = array(':player' => 'Lionel Messi');
+  if(isset($_GET['player'])){
+    $data[':player'] = $_GET['player'];
+  }
+  $sql = "CALL getPlayerInfo(:player);";
+  echo getJSON($sql, $data);
+}
+
 ?>
