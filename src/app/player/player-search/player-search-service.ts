@@ -3,6 +3,7 @@ import { Player } from "../player-model";
 import { Http, Response } from '@angular/http';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/Rx'
+import { PlayerSearchModel } from "./player-search.model";
 
 
 @Injectable()
@@ -19,6 +20,14 @@ export class PlayerSearchService {
             return res.json();
         }).catch((err: Error) =>{
             return Observable.throw('The server returned an error message ' + err.message);
+        })
+    }
+
+    public getPlayerStats(searchInput: PlayerSearchModel): Observable<Player[]> {
+        return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
+            return res.json();
+        }).catch((err: Error) => {
+            return Observable.throw('The server returned an error message ' + err.message)
         })
     }
 }

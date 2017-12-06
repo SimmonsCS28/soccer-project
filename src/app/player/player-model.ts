@@ -1,4 +1,7 @@
 export class Player {
-    player: string;
-    club: string;
+    playerName?: string;
+    position?: string;
+    gamesPlayed?: string;
+    goalsScored?: string;
+    gpg?: string;
 }

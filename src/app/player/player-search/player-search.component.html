@@ -79,7 +79,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let player of players">
+              <tr *ngFor="let player of players" (click)="getPlayer(player.club)">
                 <td>{{player.player}}</td>
                 <td>{{player.club}}</td>
               </tr>
