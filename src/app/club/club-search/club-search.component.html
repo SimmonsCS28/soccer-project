@@ -5,34 +5,33 @@
       <p>Select an option from one or more categories to find clubs you might be interested in.</p>
       <div *ngIf="clubFound" id="clubDetails">
         <h3>Club Details</h3>
+        <div>
+            <img src="{{individualClub.logo}}">
+        </div>
         <table class="table" id="club-table">
           <tbody>
             <tr>
-              <td>Club Name:</td>
-              <td>{{individualClub.clubName}}</td>
+              <td class="td-label">Club Name:</td>
+              <td class="label-value">{{individualClub.clubName}}</td>
             </tr>
             <tr>
-              <td>Club Colors:</td>
-              <td>{{individualClub.colors}}</td>
+              <td class="td-label">Club Colors:</td>
+              <td class="label-value">{{individualClub.colors}}</td>
             </tr>
             <tr>
-              <td>League:</td>
-              <td>{{individualClub.leagueName}}</td>
+              <td class="td-label">League:</td>
+              <td class="label-value">{{individualClub.leagueName}}</td>
             </tr>
             <tr>
-              <td>World Ranking:</td>
-              <td>{{individualClub.worldRanking}}</td>
-            </tr>
-            <tr>
-              <td><a target="_blank" href="http://{{individualClub.website}}">Team Website</a></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button></td>
-              <td></td>
+              <td class="td-label">World Ranking:</td>
+              <td class="label-value">{{individualClub.worldRanking}}</td>
             </tr>
           </tbody>
         </table>
+        <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
+        <div>
+            <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+        </div>
       </div>
       <form *ngIf="!formToggle" #clubSearchForm="ngForm" (ngSubmit)="clubSearchSubmit()" id="clubSearchForm">
         <div id="club-data">

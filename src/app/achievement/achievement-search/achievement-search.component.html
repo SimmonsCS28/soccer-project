@@ -1,62 +1,93 @@
 <div class="container" id="achievement-search-container">
   <div class="row">
     <div class="col-sm-8" style="text-align: center; margin-left: 13em;">
-        <h1 id="achievement-search-header">Achievement Search</h1>
-        <p>Select an option from one or more categories to find clubs based on their achievements.</p>
-      <form *ngIf="!formToggle" #achievementSearchForm="ngForm" (ngSubmit)="achievementSearchSubmit()" id="achievementSearchForm">
-        <div id="achievement-data">
-          <div class="form-group">
-            <div class="row">
-              <h3>Achievements</h3>
-            </div>
-            <div class="row">
-              <label for="mostTrophies">Most Tropies Won</label>
-              <input ngModel type='radio' value='1' name='mostTrophies' id="mostTrophies">
-            </div>
-            <div class="row">
-              <label for="highestGA">Highest Goal Average</label>
-              <input ngModel type='radio' value='2' name='highestGA' id="highestGA">
-            </div>
-            <div class="row">
-              <label for="lowestGCA">Lowest Goals Conceded Average</label>
-              <input ngModel type='radio' value='3' name='lowestGCA' id="lowestGCA">
-            </div>
-            <div class="row">
-              <label for="topFF">Top 5 Finisher</label>
-              <input ngModel type='radio' value='4' name='topFF' id="topFF">
-            </div>
-            <div class="row">
-              <label for="highestWP">Highest Win Percentage</label>
-              <input ngModel type='radio' value='4' name='highestWP' id="highestWP">
-            </div>
-            <div class="row">
-              <label for="lowestLP">Lowest Loss Percentage</label>
-              <input ngModel type='radio' value='0' name='lowestLP' id="lowestLP">
-            </div>
-          </div>
-        </div>
+      <h1 id="achievement-search-header">Achievement Search</h1>
+      <p>Select an option from one or more categories to find clubs based on their achievements.</p>
+      <div *ngIf="clubFound" id="clubDetails">
+        <h3>Club Details</h3>
         <div>
-          <button class="btn btn-lg btn-success" id="player-search-submit-button" type="submit">Search</button>
+          <img src="{{individualClub.logo}}">
         </div>
-        <div>
-          <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="achievementSearchForm.pristine">Reset Form</button>
-        </div>
-      </form>
-      <div *ngIf="achievements" id="achievements-table-div">
-        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
-        <table class="table" id="achievement-table">
-          <thead>
-            <tr>
-              <th>Club</th>
-            </tr>
-          </thead>
+        <table class="table" id="club-table">
           <tbody>
-            <tr *ngFor="let award of achievements">
-              <td>{{award.club}}</td>
+            <tr>
+              <td class="td-label">Club Name:</td>
+              <td class="label-value">{{individualClub.clubName}}</td>
+            </tr>
+            <tr>
+              <td class="td-label">Club Colors:</td>
+              <td class="label-value">{{individualClub.colors}}</td>
+            </tr>
+            <tr>
+              <td class="td-label">League:</td>
+              <td class="label-value">{{individualClub.leagueName}}</td>
+            </tr>
+            <tr>
+              <td class="td-label">World Ranking:</td>
+              <td class="label-value">{{individualClub.worldRanking}}</td>
             </tr>
           </tbody>
         </table>
+        <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
+        <div>
+            <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+        </div>
+      </div>
+      <div>
+        <form *ngIf="!formToggle" #achievementSearchForm="ngForm" (ngSubmit)="achievementSearchSubmit()" id="achievementSearchForm">
+          <div id="achievement-data">
+            <div class="form-group">
+              <div class="row">
+                <h3>Achievements</h3>
+              </div>
+              <div class="row">
+                <label for="mostTrophies">Most Tropies Won</label>
+                <input ngModel type='radio' value='1' name='mostTrophies' id="mostTrophies">
+              </div>
+              <div class="row">
+                <label for="highestGA">Highest Goal Average</label>
+                <input ngModel type='radio' value='2' name='highestGA' id="highestGA">
+              </div>
+              <div class="row">
+                <label for="lowestGCA">Lowest Goals Conceded Average</label>
+                <input ngModel type='radio' value='3' name='lowestGCA' id="lowestGCA">
+              </div>
+              <div class="row">
+                <label for="topFF">Top 5 Finisher</label>
+                <input ngModel type='radio' value='4' name='topFF' id="topFF">
+              </div>
+              <div class="row">
+                <label for="highestWP">Highest Win Percentage</label>
+                <input ngModel type='radio' value='4' name='highestWP' id="highestWP">
+              </div>
+              <div class="row">
+                <label for="lowestLP">Lowest Loss Percentage</label>
+                <input ngModel type='radio' value='0' name='lowestLP' id="lowestLP">
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="btn btn-lg btn-success" id="player-search-submit-button" type="submit">Search</button>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="achievementSearchForm.pristine">Reset Form</button>
+          </div>
+        </form>
+        <div *ngIf="clubs" id="achievements-table-div">
+          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+          <table class="table" id="achievement-table">
+            <thead>
+              <tr>
+                <th>Clubs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let club of clubs" (click)="getClub(club.club)">
+                <td>{{club.club}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-</div>

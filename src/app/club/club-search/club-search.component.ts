@@ -54,6 +54,7 @@ export class ClubSearchComponent implements OnInit {
         this.individualClub.leagueName = res[0].leagueName;
         this.individualClub.worldRanking = res[0].worldRanking;
         this.individualClub.website = res[0].website;
+        this.individualClub.logo = res[0].logo;
         this.clubFound = true;
         this.clubs = undefined;
         this.sendClubDetails.emit(res);

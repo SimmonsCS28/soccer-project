@@ -37,3 +37,37 @@ th {
     outline-style: solid;
     background-color: rgba(26, 26, 26, 0.911);
 }
+
+#clubDetails {
+    background-color: rgba(26, 26, 26, 0.911)
+}
+
+th {
+    text-align: center;
+}
+
+#table-div{
+    outline-color: gray;
+    outline-style: solid;
+    background-color: rgba(26, 26, 26, 0.911);
+}
+
+#club-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 3em;
+}
+
+#clickable {
+    cursor: pointer;
+}
+
+.td-label {
+    text-align: right;
+    padding-left: 6em;
+}
+
+.label-value {
+    text-align: left;
+}

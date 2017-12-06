@@ -45,3 +45,11 @@ th {
     cursor: pointer;
 }
 
+.td-label {
+    text-align: right;
+    padding-left: 6em;
+}
+
+.label-value {
+    text-align: left;
+}
