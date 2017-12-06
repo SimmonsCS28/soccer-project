@@ -27,6 +27,9 @@
      case 'clublist':
       getClubList();
       break;
+     case 'playerstats':
+      getPlayer();
+      break;        
      default:
         echo 'An unknown error has occurred.';
     }
