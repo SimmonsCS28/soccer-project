@@ -66,7 +66,6 @@ export class AchievementSearchComponent implements OnInit {
         this.clubs = undefined;
       }
     });
-
   }
 
   public toggleForm() {

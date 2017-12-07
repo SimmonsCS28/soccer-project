@@ -4,6 +4,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from "rxjs/Observable";
 import 'rxjs/Rx'
 import { PlayerSearchModel } from "./player-search.model";
+import { Club } from "../../club/club-model";
 
 
 @Injectable()
@@ -14,7 +15,7 @@ export class PlayerSearchService {
     constructor(private http: Http) {
     }
 
-    public getPlayersBySearchForm(searchInput: string): Observable<Player[]> {
+    public getPlayersBySearchForm(searchInput: string): Observable<Club[]> {
         console.log(searchInput);
         return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
             return res.json();
