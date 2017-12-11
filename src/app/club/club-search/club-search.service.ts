@@ -31,7 +31,7 @@ export class ClubSearchService {
         })
     }
 
-    public getSearchCriteria(srchForm: NgForm): Array<string> {
+    public getSearchCriteria(srchForm: any): Array<string> {
         let searchCriteria = new Array<string>();
         if (srchForm.goals !== ''){
             if (srchForm.goals === '1') {
