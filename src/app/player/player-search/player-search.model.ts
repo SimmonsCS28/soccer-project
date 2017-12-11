@@ -1,4 +1,4 @@
 export class PlayerSearchModel {
     type: string;
-    playerName: string;
+    player: string;
 }

@@ -21,11 +21,23 @@ export class MiscSearchComponent implements OnInit {
   public individualClub = new Club();
   public clubFound: Boolean = false;
   public formToggle: Boolean = false;
+  public resultsToggle: Boolean = false;
 
-  public teamColor = {color: ''};
-  public teamColors = [{color: 'red'}, {color: 'white'}, {color: 'blue'}];
+  public teamColor = { color: '' };
+  public teamColors = [
+    { color: 'red' },
+    { color: 'black' },
+    { color: 'blue' },
+    { color: 'white' },
+    { color: 'yellow' },
+    { color: 'burgundy' },
+    { color: 'orange' },
+    { color: 'gray' },
+    { color: 'purple' },
+    { color: 'green' },
+    { color: 'gold' },];
 
-  public regions = [{region: 'Major League Soccer'}, {region: 'Spain'}, {region: 'Europe'}]
+  public regions = [{ region: 'United States/Canada' }, { region: 'Spain' }, { region: 'United Kingdom' }]
 
   constructor(
     private http: Http,
@@ -46,6 +58,7 @@ export class MiscSearchComponent implements OnInit {
     if (resp) {
       this.clubs = resp;
       this.formToggle = true;
+      this.resultsToggle = true;
     }
   }
 
@@ -55,7 +68,7 @@ export class MiscSearchComponent implements OnInit {
     // console.log(encodedClubName);
     this.clubSearchObject.team = cName;
     this.clubService.getClub(this.clubSearchObject).subscribe((res: Club) => {
-      if(res) {
+      if (res) {
         this.individualClub.clubName = res[0].clubName;
         this.individualClub.colors = res[0].colors;
         this.individualClub.leagueName = res[0].leagueName;
@@ -63,14 +76,19 @@ export class MiscSearchComponent implements OnInit {
         this.individualClub.website = res[0].website;
         this.individualClub.logo = res[0].logo;
         this.clubFound = true;
-        this.clubs = undefined;
+        this.resultsToggle = false;
       }
     });
   }
-  
+
   public toggleForm() {
     this.formToggle = false;
     this.clubFound = false;
+    this.resultsToggle = false;
+  }
+
+  public toggleResults() {
+    this.resultsToggle = true;
   }
 
   public resetTable() {

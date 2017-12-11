@@ -28,8 +28,12 @@ export class PlayerSearchComponent implements OnInit {
   public clubSearchObject = new ClubSearchModel();
   public individualClub = new Club();
   public player: Player = new Player();
+
   public formToggle: Boolean = false;
   public clubFound: Boolean = false;
+  public resultsToggle: Boolean = false;
+
+  public searchCriteria: Array<string>;
 
   constructor(
     private http: Http,
@@ -49,20 +53,29 @@ export class PlayerSearchComponent implements OnInit {
   private handleSearchResponse(resp: Club[]) {
     if (resp) {
       this.clubs = resp;
+      this.searchCriteria = new Array<string>();
+      this.searchCriteria = this.clubService.getSearchCriteria(this.playerSearchForm.value);
       this.formToggle = true;
+      this.resultsToggle = true;
     }
   }
 
   public getPlayer(pName: string) {
-    this.playerSearchObject.type = "getplayers";
-    this.playerSearchObject.playerName = pName;
-    this.playerService.getPlayerStats(this.playerSearchObject).subscribe((res: Player[]) => {
-      this.players = res;
-      this.player = this.players.find(player => player.playerName === this.playerSearchObject.playerName);
-    })
+    this.playerSearchObject.type = "playerstats";
+    this.playerSearchObject.player = pName;
+    this.playerService.getPlayerStats(this.playerSearchObject).subscribe((res: Player) => {
+      if (res) {
+        this.player.playerName = res[0].playerName;
+        this.player.position = res[0].position;
+        this.player.goalsScored = res[0].goalsScored;
+        this.player.gamesPlayed = res[0].gamesPlayed;
+        this.player.redCards = res[0].redCards;
+        this.player.yellowCards = res[0].yellowCards;
+      }
+    });
   }
 
-  private getClub(cName: string) {
+  private getPlayerInfo(cName: string, pName: string) {
     this.clubSearchObject.type = 'getclub';
     // const encodedClubName: string = encodeURIComponent(cName);
     // console.log(encodedClubName);
@@ -76,14 +89,20 @@ export class PlayerSearchComponent implements OnInit {
         this.individualClub.website = res[0].website;
         this.individualClub.logo = res[0].logo;
         this.clubFound = true;
-        this.clubs = undefined;
+        this.resultsToggle = false;
       }
     });
+    this.getPlayer(pName);
   }
 
   public toggleForm() {
     this.formToggle = false;
     this.clubFound = false;
+    this.resultsToggle = false;
+  }
+
+  public toggleResults() {
+    this.resultsToggle = true;
   }
 
   public resetTable() {

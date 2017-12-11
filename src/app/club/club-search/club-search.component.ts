@@ -18,6 +18,9 @@ export class ClubSearchComponent implements OnInit {
   public individualClub = new Club();
   public formToggle: Boolean = false;
   public clubFound: Boolean = false;
+  public resultsToggle: Boolean = false;
+
+  public searchCriteria: Array<string>;
 
   constructor(
     private clubService: ClubSearchService) {
@@ -36,7 +39,10 @@ export class ClubSearchComponent implements OnInit {
   private handleClubSearchResponse(resp: Club[]) {
     if(resp){
       this.clubs = resp;
+      this.searchCriteria = new Array<string>();
+      this.searchCriteria = this.clubService.getSearchCriteria(this.clbSrchForm.value);
       this.formToggle = true;
+      this.resultsToggle = true;
     }
   }
 
@@ -54,7 +60,7 @@ export class ClubSearchComponent implements OnInit {
         this.individualClub.website = res[0].website;
         this.individualClub.logo = res[0].logo;
         this.clubFound = true;
-        this.clubs = undefined;
+        this.resultsToggle = false;
       }
     });
 
@@ -63,6 +69,11 @@ export class ClubSearchComponent implements OnInit {
   public toggleForm() {
     this.formToggle = false;
     this.clubFound = false;
+    this.resultsToggle = false;
+  }
+
+  public toggleResults() {
+    this.resultsToggle = true;
   }
 
   public resetTable() {

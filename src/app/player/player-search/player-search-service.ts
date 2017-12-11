@@ -16,7 +16,6 @@ export class PlayerSearchService {
     }
 
     public getPlayersBySearchForm(searchInput: string): Observable<Club[]> {
-        console.log(searchInput);
         return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
             return res.json();
         }).catch((err: Error) =>{
@@ -24,7 +23,7 @@ export class PlayerSearchService {
         })
     }
 
-    public getPlayerStats(searchInput: PlayerSearchModel): Observable<Player[]> {
+    public getPlayerStats(searchInput: PlayerSearchModel): Observable<Player> {
         return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
             return res.json();
         }).catch((err: Error) => {

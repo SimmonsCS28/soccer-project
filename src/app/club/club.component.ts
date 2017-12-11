@@ -17,7 +17,6 @@ export class ClubComponent implements OnInit {
   }
 
   public handleClubInfo(clubInput: Club) {
-    console.log('test')
     this.club = clubInput;
   }
 

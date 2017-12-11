@@ -28,6 +28,13 @@ label {
     margin-top: 3em;
 }
 
+#club-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 10px;
+}
+
 th {
     text-align: center;
 }
@@ -44,3 +51,26 @@ th {
     border-color: white;
     margin-top: 3em;
 }
+
+.td-label {
+    text-align: right;
+    padding-left: 6em;
+}
+
+.label-value {
+    text-align: left;
+}
+
+select {
+    max-width: 15em; 
+  }
+option[value=""][disabled] {
+    display: none;
+  }
+option {
+    color: black;
+  }
+
+  .form-control {
+ display: inline;
+  }

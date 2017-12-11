@@ -18,11 +18,15 @@ export class AchievementSearchComponent implements OnInit {
 
   public clubSearchObject = new ClubSearchModel();
   public individualClub = new Club();
-  public clubs: Club[];
 
+  public clubs: Club[];
   public achievements: Achievement[];
+
   public formToggle: Boolean = false;
   public clubFound: Boolean = false;
+  public resultsToggle: Boolean = false;
+
+  public searchCriteria: Array<string>;
 
   constructor(
     private http: Http,
@@ -41,12 +45,31 @@ export class AchievementSearchComponent implements OnInit {
   }
 
   private handleSearchResponse(resp: Club[]) {
-    if(resp){
+    if (resp) {
       this.clubs = resp;
+      this.searchCriteria = new Array<string>();
+      if (this.asf.value.mostTrophies === '1') {
+        this.searchCriteria.push("Most Trophies Won");
+      }
+      if (this.asf.value.highestGA === '2') {
+        this.searchCriteria.push("Highest Goal Average");
+      }
+      if (this.asf.value.lowestGCA === '3') {
+        this.searchCriteria.push("Lowest Goals Conceded Average");
+      }
+      if (this.asf.value.topFF === '4') {
+        this.searchCriteria.push("Top 5 Finisher");
+      }
+      if (this.asf.value.highestWP === '5') {
+        this.searchCriteria.push("Highest Win Percentage");
+      }
+      if (this.asf.value.lowestLP === '6') {
+        this.searchCriteria.push("Lowest Loss Percentage");
+      }
+
       this.formToggle = true;
+      this.resultsToggle = true;
     }
-    
-    console.log(this.clubs);
   }
 
   private getClub(cName: string) {
@@ -55,7 +78,7 @@ export class AchievementSearchComponent implements OnInit {
     // console.log(encodedClubName);
     this.clubSearchObject.team = cName;
     this.clubService.getClub(this.clubSearchObject).subscribe((res: Club) => {
-      if(res) {
+      if (res) {
         this.individualClub.clubName = res[0].clubName;
         this.individualClub.colors = res[0].colors;
         this.individualClub.leagueName = res[0].leagueName;
@@ -63,7 +86,7 @@ export class AchievementSearchComponent implements OnInit {
         this.individualClub.website = res[0].website;
         this.individualClub.logo = res[0].logo;
         this.clubFound = true;
-        this.clubs = undefined;
+        this.resultsToggle = false;
       }
     });
   }
@@ -71,6 +94,11 @@ export class AchievementSearchComponent implements OnInit {
   public toggleForm() {
     this.formToggle = false;
     this.clubFound = false;
+    this.resultsToggle = false;
+  }
+
+  public toggleResults() {
+    this.resultsToggle = true;
   }
 
   public resetTable() {

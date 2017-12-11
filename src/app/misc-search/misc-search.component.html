@@ -4,35 +4,38 @@
       <h1 id="misc-search-header">Miscellaneous Search</h1>
       <p>Select an option from one or more categories to find clubs based on other club info.</p>
       <div *ngIf="clubFound" id="clubDetails">
-          <h3>Club Details</h3>
-          <div>
-            <img src="{{individualClub.logo}}">
-          </div>
-          <table class="table" id="club-table">
-            <tbody>
-              <tr>
-                <td class="td-label">Club Name:</td>
-                <td class="label-value">{{individualClub.clubName}}</td>
-              </tr>
-              <tr>
-                <td class="td-label">Club Colors:</td>
-                <td class="label-value">{{individualClub.colors}}</td>
-              </tr>
-              <tr>
-                <td class="td-label">League:</td>
-                <td class="label-value">{{individualClub.leagueName}}</td>
-              </tr>
-              <tr>
-                <td class="td-label">World Ranking:</td>
-                <td class="label-value">{{individualClub.worldRanking}}</td>
-              </tr>
-            </tbody>
-          </table>
-          <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
-          <div>
-            <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
-          </div>
+        <h3>Club Details</h3>
+        <div>
+          <img src="{{individualClub.logo}}">
         </div>
+        <table class="table" id="club-table">
+          <tbody>
+            <tr>
+              <td class="col-sm-6 td-label">Club Name:</td>
+              <td class="col-sm-6 label-value">{{individualClub.clubName}}</td>
+            </tr>
+            <tr>
+              <td class="col-sm-6 td-label">Club Colors:</td>
+              <td class="col-sm-6 label-value">{{individualClub.colors}}</td>
+            </tr>
+            <tr>
+              <td class="col-sm-6 td-label">League:</td>
+              <td class="col-sm-6 label-value">{{individualClub.leagueName}}</td>
+            </tr>
+            <tr>
+              <td class="col-sm-6 td-label">World Ranking:</td>
+              <td class="col-sm-6 label-value">{{individualClub.worldRanking}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
+        <div>
+          <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+        </div>
+        <div>
+          <button class="btn btn-success" (click)="toggleResults()">Show Results</button>
+        </div>
+      </div>
       <form *ngIf="!formToggle" #miscSearchForm="ngForm" (ngSubmit)="miscSearchSubmit()" id="miscSearchForm">
         <div id="misc-data">
           <div class="form-group">
@@ -41,8 +44,8 @@
             </div>
             <div class="row">
               <label for="teamColor">Color</label>
-              <select [ngModel]='teamColor' name='teamColor' aria-placeholder="Select a color">
-                <option value="" disabled='true' [selected]='teamColor.color'>Please Select A Color</option>
+              <select class="form-control" [ngModel]='teamColor' name='teamColor'>
+                <option value="" disabled selected>Please Select A Color</option>
                 <option *ngFor='let c of teamColors' [ngValue]='c.color'>{{c.color}}</option>
               </select>
             </div>
@@ -51,8 +54,8 @@
             </div>
             <div class="row">
               <label for="region">Regions</label>
-              <select [ngModel]='region' name='region'>
-                <option value='' disabled='true' >Select A Region</option>
+              <select class="form-control" [ngModel]='region' name='region'>
+                <option value='' disabled='true'>Select A Region</option>
                 <option *ngFor='let r of regions' [ngValue]='r.region'>{{r.region}}</option>
               </select>
             </div>
@@ -65,20 +68,23 @@
           <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="miscSearchForm.pristine">Reset Form</button>
         </div>
       </form>
-      <div *ngIf="clubs" id="misc-table-div">
-        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
-        <table class="table" id="misc-table">
-          <thead>
-            <tr>
-              <th>Club</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let club of clubs" (click)='getClub(club.club)'>
-              <td>{{club.club}}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div *ngIf="resultsToggle">
+        <div *ngIf="clubs" id="misc-table-div">
+          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+          <h3>Miscellaneous Search Results</h3>
+          <table class="table" id="misc-table">
+            <thead>
+              <tr>
+                <th>Club</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let club of clubs" (click)='getClub(club.club)'>
+                <td>{{club.club}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

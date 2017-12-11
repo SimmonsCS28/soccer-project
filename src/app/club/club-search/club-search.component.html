@@ -6,7 +6,7 @@
       <div *ngIf="clubFound" id="clubDetails">
         <h3>Club Details</h3>
         <div>
-            <img src="{{individualClub.logo}}">
+          <img src="{{individualClub.logo}}">
         </div>
         <table class="table" id="club-table">
           <tbody>
@@ -30,7 +30,10 @@
         </table>
         <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
         <div>
-            <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+          <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+        </div>
+        <div>
+          <button class="btn btn-success" (click)="toggleResults()">Show Results</button>
         </div>
       </div>
       <form *ngIf="!formToggle" #clubSearchForm="ngForm" (ngSubmit)="clubSearchSubmit()" id="clubSearchForm">
@@ -99,20 +102,24 @@
           <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="clubSearchForm.pristine">Reset Form</button>
         </div>
       </form>
-      <div *ngIf="clubs" id="table-div">
-        <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
-        <table class="table" id="club-table">
-          <thead>
-            <tr>
-              <th>Clubs</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let club of clubs" (click)="getClub(club.club)">
-              <td>{{club.club}}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div *ngIf="resultsToggle">
+        <div *ngIf="clubs" id="table-div">
+          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+          <h3>Club Search Results</h3>
+          <p>Search Criteria: {{this.searchCriteria}}</p>
+          <table class="table" id="club-table">
+            <thead>
+              <tr>
+                <th>Clubs</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let club of clubs" (click)="getClub(club.club)">
+                <td>{{club.club}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>

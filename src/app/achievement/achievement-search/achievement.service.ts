@@ -14,7 +14,6 @@ export class AchievementService {
     }
 
     public getAchievementsBySearchForm(searchInput: string): Observable<Achievement[]> {
-        console.log(searchInput);
         return this.http.get(this.url, { params: searchInput }).map((res: Response) => {
             return res.json();
         }).catch((err: Error) =>{

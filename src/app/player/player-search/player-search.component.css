@@ -21,15 +21,18 @@ label {
     margin: 10px;
 }
 
+#club-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 10px;
+}
+
 #player-table {
     background-color: rgba(26, 26, 26, 0.911);
     color: white;
     border-color: white;
     margin-top: 3em;
-}
-
-th {
-    text-align: center;
 }
 
 #player-table-div{
@@ -43,4 +46,27 @@ th {
     color: white;
     border-color: white;
     margin-top: 3em;
+}
+
+#player-stats-table {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+}
+
+#player-stats-table.td-label {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+.td-label {
+    text-align: right;
+    padding-left: 6em;
+}
+
+.label-value {
+    text-align: left;
 }

@@ -11,26 +11,29 @@
         <table class="table" id="club-table">
           <tbody>
             <tr>
-              <td class="td-label">Club Name:</td>
-              <td class="label-value">{{individualClub.clubName}}</td>
+              <td class="col-sm-6 td-label">Club Name:</td>
+              <td class="col-sm-6 label-value">{{individualClub.clubName}}</td>
             </tr>
             <tr>
-              <td class="td-label">Club Colors:</td>
-              <td class="label-value">{{individualClub.colors}}</td>
+              <td class="col-sm-6 td-label">Club Colors:</td>
+              <td class="col-sm-6 label-value">{{individualClub.colors}}</td>
             </tr>
             <tr>
-              <td class="td-label">League:</td>
-              <td class="label-value">{{individualClub.leagueName}}</td>
+              <td class="col-sm-6 td-label">League:</td>
+              <td class="col-sm-6 label-value">{{individualClub.leagueName}}</td>
             </tr>
             <tr>
-              <td class="td-label">World Ranking:</td>
-              <td class="label-value">{{individualClub.worldRanking}}</td>
+              <td class="col-sm-6 td-label">World Ranking:</td>
+              <td class="col-sm-6 label-value">{{individualClub.worldRanking}}</td>
             </tr>
           </tbody>
         </table>
         <a target="_blank" href="http://{{individualClub.website}}">Team Website</a>
         <div>
-            <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+          <button class="btn btn-success" (click)="toggleForm()">Back To Club Search Form</button>
+        </div>
+        <div>
+          <button class="btn btn-success" (click)="toggleResults()">Show Results</button>
         </div>
       </div>
       <div>
@@ -58,11 +61,11 @@
               </div>
               <div class="row">
                 <label for="highestWP">Highest Win Percentage</label>
-                <input ngModel type='radio' value='4' name='highestWP' id="highestWP">
+                <input ngModel type='radio' value='5' name='highestWP' id="highestWP">
               </div>
               <div class="row">
                 <label for="lowestLP">Lowest Loss Percentage</label>
-                <input ngModel type='radio' value='0' name='lowestLP' id="lowestLP">
+                <input ngModel type='radio' value='6' name='lowestLP' id="lowestLP">
               </div>
             </div>
           </div>
@@ -73,20 +76,24 @@
             <button class="btn btn-sm btn-warning" type="reset" (click)="resetTable()" [disabled]="achievementSearchForm.pristine">Reset Form</button>
           </div>
         </form>
-        <div *ngIf="clubs" id="achievements-table-div">
-          <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
-          <table class="table" id="achievement-table">
-            <thead>
-              <tr>
-                <th>Clubs</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let club of clubs" (click)="getClub(club.club)">
-                <td>{{club.club}}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div *ngIf="resultsToggle">
+          <div *ngIf="clubs" id="achievements-table-div">
+            <button class="btn btn-success" *ngIf="formToggle" (click)="toggleForm()">Show Form</button>
+            <h3>Achievement Search Results</h3>
+            <p>Search Criteria: {{this.searchCriteria}}</p>
+            <table class="table" id="achievement-table">
+              <thead>
+                <tr>
+                  <th>Clubs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let club of clubs" (click)="getClub(club.club)">
+                  <td>{{club.club}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
