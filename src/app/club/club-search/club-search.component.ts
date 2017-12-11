@@ -12,10 +12,8 @@ import { ClubSearchModel } from './club-search.model';
 })
 export class ClubSearchComponent implements OnInit {
   @ViewChild('clubSearchForm') public clbSrchForm: NgForm
-  @Output()sendClubDetails: EventEmitter<Club> = new EventEmitter<Club>();
 
   public clubSearchObject = new ClubSearchModel();
-
   public clubs: Club[];
   public individualClub = new Club();
   public formToggle: Boolean = false;
@@ -57,7 +55,6 @@ export class ClubSearchComponent implements OnInit {
         this.individualClub.logo = res[0].logo;
         this.clubFound = true;
         this.clubs = undefined;
-        this.sendClubDetails.emit(res);
       }
     });
 

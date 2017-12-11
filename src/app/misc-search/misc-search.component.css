@@ -37,3 +37,10 @@ th {
     outline-style: solid;
     background-color: rgba(26, 26, 26, 0.911);
 }
+
+#clubDetails {
+    background-color: rgba(26, 26, 26, 0.911);
+    color: white;
+    border-color: white;
+    margin-top: 3em;
+}

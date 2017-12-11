@@ -2,6 +2,9 @@ import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { MiscSearchService } from './misc-search.service';
 import { NgForm } from '@angular/forms';
+import { Club } from '../club/club-model';
+import { ClubSearchModel } from '../club/club-search/club-search.model';
+import { ClubSearchService } from '../club/club-search/club-search.service';
 
 @Component({
   selector: 'app-misc-search',
@@ -12,12 +15,22 @@ import { NgForm } from '@angular/forms';
 export class MiscSearchComponent implements OnInit {
 
   @ViewChild('miscSearchForm') public miscSearchForm: NgForm;
-  public misc: any[];
+
+  public clubSearchObject = new ClubSearchModel();
+  public clubs: Club[];
+  public individualClub = new Club();
+  public clubFound: Boolean = false;
   public formToggle: Boolean = false;
+
+  public teamColor = {color: ''};
+  public teamColors = [{color: 'red'}, {color: 'white'}, {color: 'blue'}];
+
+  public regions = [{region: 'Major League Soccer'}, {region: 'Spain'}, {region: 'Europe'}]
 
   constructor(
     private http: Http,
-    private miscService: MiscSearchService) { }
+    private miscService: MiscSearchService,
+    private clubService: ClubSearchService) { }
 
   ngOnInit() {
   }
@@ -31,17 +44,37 @@ export class MiscSearchComponent implements OnInit {
   private handlePlayerResults(resp: any[]) {
     console.log(resp);
     if (resp) {
-      this.misc = resp;
+      this.clubs = resp;
       this.formToggle = true;
     }
   }
 
+  private getClub(cName: string) {
+    this.clubSearchObject.type = 'getclub';
+    // const encodedClubName: string = encodeURIComponent(cName);
+    // console.log(encodedClubName);
+    this.clubSearchObject.team = cName;
+    this.clubService.getClub(this.clubSearchObject).subscribe((res: Club) => {
+      if(res) {
+        this.individualClub.clubName = res[0].clubName;
+        this.individualClub.colors = res[0].colors;
+        this.individualClub.leagueName = res[0].leagueName;
+        this.individualClub.worldRanking = res[0].worldRanking;
+        this.individualClub.website = res[0].website;
+        this.individualClub.logo = res[0].logo;
+        this.clubFound = true;
+        this.clubs = undefined;
+      }
+    });
+  }
+  
   public toggleForm() {
     this.formToggle = false;
+    this.clubFound = false;
   }
 
   public resetTable() {
-    this.misc = undefined;
+    this.clubs = undefined;
   }
 
 }
