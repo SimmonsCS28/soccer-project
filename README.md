@@ -7,7 +7,7 @@ For further help on installing and setting up Node JS go here: http://blog.teamt
 ## Development server 
 
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Make sure you run the `npm start` command from the project's \soccer-project directory. 
-E.g. C:\Users\Owner\Documents\GitHub\soccer-project> npm start
+E.g. C:\Users\Owner\Documents\GitHub\soccer-project> npm start .
 Must be connected to the UW-Whitewater network while running the application as the dabatase is located on the washington.uww.edu server. Connecting through a vpn such as Cisco Anyconnect will accomplish this.  
 
 ## Code scaffolding
