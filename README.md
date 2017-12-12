@@ -1,10 +1,14 @@
 # SoccerFan
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0. 
+Also requires the installation of Node JS. Download Node JS here: https://nodejs.org/en/download/. 
+For further help on installing and setting up Node JS go here: http://blog.teamtreehouse.com/install-node-js-npm-windows
 
-## Development server
+## Development server 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. Make sure you run the `npm start` command from the project's \soccer-project directory. 
+E.g. C:\Users\Owner\Documents\GitHub\soccer-project> npm start
+Must be connected to the UW-Whitewater network while running the application as the dabatase is located on the washington.uww.edu server. Connecting through a vpn such as Cisco Anyconnect will accomplish this.  
 
 ## Code scaffolding
 
